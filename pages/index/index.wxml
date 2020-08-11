@@ -11,3 +11,8 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+<view class="food-test">
+<view>Enter a kinda food</view>
+<input class="test-input" bindconfirm="enterFood" placeholder="e.g. Cheese"></input>
+</view>
