@@ -17,7 +17,7 @@
 		"useIsolateContext": true,
 		"nodeModules": false,
 		"enhance": true,
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false,
 		"showShadowRootInWxmlPanel": true
 	},
