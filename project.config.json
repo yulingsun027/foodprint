@@ -1,6 +1,8 @@
 {
-	"miniprogramRoot": "miniprogram/",
-	"cloudfunctionRoot": "cloudfunctions/",
+	"description": "Project configuration file",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
 		"scopeDataCheck": false,
@@ -11,19 +13,25 @@
 		"preloadBackgroundData": false,
 		"minified": true,
 		"autoAudits": false,
-		"newFeature": true,
+		"newFeature": false,
 		"uglifyFileName": false,
 		"uploadWithSourceMap": true,
 		"useIsolateContext": true,
 		"nodeModules": false,
-		"enhance": true,
+		"enhance": false,
 		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false,
 		"showShadowRootInWxmlPanel": true
 	},
+	"compileType": "miniprogram",
+	"libVersion": "2.12.1",
 	"appid": "wx3d390a5e2e0feb6d",
 	"projectname": "foodprint",
-	"libVersion": "2.8.1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -35,22 +43,21 @@
 			"current": -1,
 			"list": []
 		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
 		"plugin": {
 			"current": -1,
 			"list": []
 		},
-		"game": {
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }
