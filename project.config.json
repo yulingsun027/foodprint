@@ -90,6 +90,13 @@
 					"id": -1,
 					"name": "dashboard",
 					"pathName": "pages/dashboard/dashboard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "landingform",
+					"pathName": "pages/landingform/landingform",
 					"scene": null
 				}
 			]

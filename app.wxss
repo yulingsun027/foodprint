@@ -9,9 +9,3 @@
   box-sizing: border-box;
 }
 
-@font-face {
-font-family: 'fairplay display',serif;
-src: url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'");
-font-weight: normal;
-font-style: normal;
-}
