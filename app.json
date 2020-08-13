@@ -12,6 +12,31 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
+
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#B2C7A8",
+    "borderStyle": "black",
+    "backgroundColor": "#F4E9E2",
+    "list": [
+      {
+        "pagePath": "pages/dashboard/dashboard",
+        "text": "Dashboard",
+        "iconPath": "/images/dashboard.png",
+        "selectedIconPath": "/images/dashboard2.png"
+      },
+      {
+        "pagePath": "pages/input/input",
+        "iconPath": "/images/add.png",
+        "selectedIconPath": "/images/add2.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "Profile",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me2.png"
+      }
+    ]
   "plugins": {
     "sdkPlugin": {
       "version": "3.14.1",
