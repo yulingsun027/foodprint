@@ -8,6 +8,7 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 }
+
 .h1 {
   color: #000000;
   font-weight: 300;
@@ -34,3 +35,4 @@
   background: #B2C7A8;
   min-height: 100vh;
 }
+
