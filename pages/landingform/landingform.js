@@ -11,6 +11,10 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  formSubmit:function (){
+
+  },
+  
   onLoad: function (options) {
 
   },
