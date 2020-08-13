@@ -1,3 +1,5 @@
+
+<!--pages/profile/profile.wxml-->
 <view class="card-product">
   <image class="avatar" src="{{currentUser.avatar}}"></image>
     <view class="card-product-infos">
@@ -5,3 +7,4 @@
     <view class="nickname"> {{currentUser.nickname}} </view>
     </view>
 </view>
+

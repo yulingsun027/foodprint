@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/input/input",
     "pages/profile/profile",
-    "pages/dashboard/dashboard"
+    "pages/dashboard/dashboard",
+    "pages/landingform/landingform"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,7 +13,6 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
-
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#B2C7A8",
