@@ -57,7 +57,7 @@ Page({
     let food = e.detail.value 
     wx.request({
       // url: `https://trackapi.nutritionix.com/v2/search/item?${food}`,
-      url: 'https://trackapi.nutritionix.com/v2/search/instant?${food}',
+      url:'https://trackapi.nutritionix.com/v2/search/instant?query=grilled cheese',
       headers: {
         'content-type': 'application/json',
         'accept': 'application/json',
