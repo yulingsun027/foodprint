@@ -1,5 +1,4 @@
-// pages/profile/profile.js
-const app = getApp();
+// pages/landing form/landingform.js
 Page({
 
   /**
@@ -13,9 +12,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      currentUser: app.globalData.userInfo,
-    });
+
   },
 
   /**
@@ -29,9 +26,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    this.setData({
-      currentUser: app.globalData.userInfo,
-    });
+
   },
 
   /**

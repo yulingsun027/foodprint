@@ -27,7 +27,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -67,26 +67,20 @@
 			"list": [
 				{
 					"id": -1,
-
 					"name": "landing page",
-
 					"pathName": "pages/landing/landing",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-
 					"name": "profile",
-
 					"pathName": "pages/profile/profile",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-
-
 					"name": "user input",
 					"pathName": "pages/input/input",
 					"query": "",
@@ -96,7 +90,6 @@
 					"id": -1,
 					"name": "dashboard",
 					"pathName": "pages/dashboard/dashboard",
-
 					"scene": null
 				}
 			]

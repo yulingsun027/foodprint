@@ -1,2 +1,9 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+
+<view class="user-profile">
+  <image class="avatar" src="{{currentUser.avatar}}"></image>
+    <view class="card-product-infos">
+    <view class="h1 nickname">Username:</view> 
+    <view class="h1 nickname"> {{currentUser.nickname}} </view>
+    </view>
+</view>
