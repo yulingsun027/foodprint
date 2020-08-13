@@ -67,22 +67,36 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "Landing Page",
+
+					"name": "landing page",
+
 					"pathName": "pages/landing/landing",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "Profile",
+
+					"name": "profile",
+
 					"pathName": "pages/profile/profile",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "log",
+
+
+					"name": "user input",
 					"pathName": "pages/input/input",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dashboard",
+					"pathName": "pages/dashboard/dashboard",
+
 					"scene": null
 				}
 			]
