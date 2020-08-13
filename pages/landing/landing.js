@@ -52,22 +52,5 @@ Page({
     })
   },
 
-  enterFood: function(e) {
-    console.log(e)
-    let food = e.detail.value 
-    wx.request({
-      // url: `https://trackapi.nutritionix.com/v2/search/item?${food}`,
-      url:'https://trackapi.nutritionix.com/v2/search/instant?query=grilled cheese',
-      headers: {
-        'content-type': 'application/json',
-        'accept': 'application/json',
-        'x-app-id': '325c929a',
-        'x-app-key': '3a46aaccb2dd260a369229eecad1f7ac'
-      },
-      method: 'GET',
-      success(res){
-        console.log("testing api", res)
-      }
-    })
-  }
+
 })
