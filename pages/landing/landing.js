@@ -17,6 +17,9 @@ Page({
         currentUser: user
       })
     });
+    wx.switchTab({
+      url: '/pages/profile/profile',
+    })
   },
 
   onLoad: function () {

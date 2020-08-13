@@ -37,6 +37,7 @@
         "selectedIconPath": "/images/me2.png"
       }
     ]
+  },
   "plugins": {
     "sdkPlugin": {
       "version": "3.14.1",
