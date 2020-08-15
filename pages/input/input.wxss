@@ -44,4 +44,29 @@
     padding-bottom: 30px;
   }
 
+  .myButton {
+    box-shadow: 2px 4px 0px 0px #899599;
+    background:linear-gradient(to bottom, #F4E9E2 5%, #F4E9E2 100%);
+    background-color:#F4E9E2;
+    border-radius:19px;
+    display:inline-block;
+    cursor:pointer;
+    color:#B2C7A8;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:13px 37px;
+    text-decoration:none;
+     text-shadow:0px 0px 0px #e1e2ed;
+     transition: 0.5s;
+   }
+   .myButton:hover {
+    background:linear-gradient(to bottom, #ffff 10%, #F4E9E2 100%);
+    background-color:#F4E9E2;
+   }
+   .myButton:active {
+    position:relative;
+     top:1px;
+     box-shadow: 0px 0px 0px 0px #899599;
+   }
   
