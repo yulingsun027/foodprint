@@ -21,11 +21,10 @@ Page({
       this.setData({
         currentUser: user
       })
+      wx.navigateTo({
+        url: '/pages/landingform/landingform',
+      })
     });
-
-    wx.navigateTo({
-      url: '/pages/landingform/landingform',
-    })
   },
 
   onLoad: function () {

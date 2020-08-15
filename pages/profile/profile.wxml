@@ -9,10 +9,10 @@
     </view>
 </view>
 <view class="info-card">
-    <view class="h1 card-product-infos">Gender:</view>
-    <view class="h1 card-product-infos" >Age:</view>
-    <view class="h1 card-product-infos" >Height:</view>
-    <view class="h1 card-product-infos" >Weight:</view>
+    <view class="h1 card-product-infos">Gender:{{gender}}</view>
+    <view class="h1 card-product-infos" >Age:{{age}}</view>
+    <view class="h1 card-product-infos" >Height:{{height}}</view>
+    <view class="h1 card-product-infos" >Weight:{{weight}}</view>
 </view>
 </view>
 
