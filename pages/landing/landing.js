@@ -4,9 +4,14 @@ const app = getApp()
 
 Page({
   data: {
-    currentUser: {},
+    currentUser: [],
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    movies:[  
+      {url:'../images/Frame_1.jpg'}, 
+      {url:'../images/Frame_2.jpg'}, 
+      {url:'../images/Frame_3.jpg'}, 
+      ]  
   },
   
   userInfoHandler: function(data){
@@ -17,6 +22,7 @@ Page({
         currentUser: user
       })
     });
+
     wx.navigateTo({
       url: '/pages/landingform/landingform',
     })
@@ -34,7 +40,5 @@ Page({
     });
 
   },
-
-
-
 })
+

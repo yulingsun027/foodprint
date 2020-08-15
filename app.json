@@ -13,6 +13,7 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
+
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#B2C7A8",
@@ -47,3 +48,4 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
+
