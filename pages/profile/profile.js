@@ -23,7 +23,10 @@ Page({
     let tableName = "updateuser";
   
     let Profile = new wx.BaaS.TableObject(tableName);
-    Profile.expand(['userid']).find().then((res) =>{
+    let query = new wx.BaaS.Query();
+
+    query.compare('userid', '=',app.globalData.userInfo.id);
+    Profile.setQuery(query).expand(['userid']).find().then((res) =>{
       console.log('userinfo', res);
       this.setData({
         gender: res.data.objects[0].customgender,
