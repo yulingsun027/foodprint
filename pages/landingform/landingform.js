@@ -5,22 +5,53 @@ Page({
    * Page initial data
    */
   data: {
+    currentUser:{
+    },
+    gender:['female', 'male', 'neutral'],
+    userGender:'',
+    age:0,
+    height:0,
+    weight:0
 
   },
 
   /**
    * Lifecycle function--Called when page load
    */
+ pickGender: function(event) {
+    let index = event.detail.value;
+    console.log(index);
+    this.setData({
+      userGender: this.data.gender[index]
+    })
+  },
+
+  bindAgeInput: function(e){
+    this.setData({
+      age: parseInt(e.detail.value)
+    })
+  }, 
+  bindHeightInput: function(e){
+    this.setData({
+      height: parseInt(e.detail.value)
+    })
+  }, 
+  bindWeightInput: function(e){
+    this.setData({
+      weight: parseInt(e.detail.value)
+    })
+  }, 
+
   formSubmit: function (event){
     console.log('update user profile', event);
-    let Profile = new wx.BaaS.TableObject('_userprofile');
+    let Profile = new wx.BaaS.TableObject('updateuser');
     let myProfile = Profile.create();
     console.log(this.data);
     let data = {
-        // review's content and rating
-        userName: this.data.currentUser.nickname,
-        userAvatar: this.data.currentUser.avatar,
-        gender: this.data.gender,
+        // update user profile
+        // userName: this.data.currentUser.nickname,
+        // userAvatar: this.data.currentUser.avatar,
+        gender: this.data.userGender,
         age:this.data.age,
         height: this.data.height,
         weight: this.data.weight,
