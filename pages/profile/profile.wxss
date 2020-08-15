@@ -19,9 +19,15 @@
   font-size: 18px;
 }
 .info-card {
+  font-size: larger;
+  background: #F4E9E2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: top;
+  align-items: center;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
-  padding-top: 10px;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

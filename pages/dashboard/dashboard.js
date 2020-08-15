@@ -7,7 +7,12 @@ Page({
   data: {
 
   },
-
+  onLoad: function (options) {
+    this.setData({
+      currentUser: app.globalData.userInfo,
+    });
+    let tableName = "updateuser";
+  },
   /**
    * Lifecycle function--Called when page load
    */
