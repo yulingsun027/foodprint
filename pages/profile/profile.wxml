@@ -9,7 +9,11 @@
     </view>
 </view>
 <view class="info-card">
-    <view class="p2 card-product-infos">whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up whats up </view>
+    <view class="h1 card-product-infos">Gender:</view>
+    <view class="h1 card-product-infos">Age:</view>
+    <view class="h1 card-product-infos">Height:</view>
+    <view class="h1 card-product-infos">Weight:</view>
 </view>
 </view>
+
 

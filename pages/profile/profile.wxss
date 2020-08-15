@@ -20,5 +20,7 @@
 .info-card {
   overflow: hidden;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 10px
 }
