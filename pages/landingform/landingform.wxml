@@ -1,0 +1,37 @@
+<view class="top-banner">
+<text class="h1 top-banner-text">Tell us more about you!</text>
+</view>
+
+<view class="submission-container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+      <input  bindinput="bindTitleInput" placeholder="gender"/>
+    </view>
+  </view>
+  
+  <view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+    <input  bindinput="bindDesInput" placeholder="age"/>
+    </view>
+  </view>
+
+  <view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+    <input  bindinput="bindDesInput" placeholder="height"/>
+    </view>
+  </view>
+
+  <view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+    <input  bindinput="bindDesInput" placeholder="height"/>
+    </view>
+  </view>
+
+
+  <view class="h1 btn-area">
+    <button formType="post" bindtap="formSubmit">Submit</button>
+  </view>
+</form>
+</view>

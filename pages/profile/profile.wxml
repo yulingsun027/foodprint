@@ -1,2 +1,20 @@
+
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="page-wrapper">
+<view class="card-product">
+  <image class="avatar" src="{{currentUser.avatar}}"></image>
+    <view class="card-product-infos">
+    <view class="h1 nickname">Username:</view> 
+    <view class="h1 nickname"> {{currentUser.nickname}} </view>
+    </view>
+</view>
+<view class="info-card">
+    <view class="h1 card-product-infos">Gender:</view>
+    <view class="h1 card-product-infos">Age:</view>
+    <view class="h1 card-product-infos">Height:</view>
+    <view class="h1 card-product-infos">Weight:</view>
+</view>
+</view>
+
+
+>>>>>>> master

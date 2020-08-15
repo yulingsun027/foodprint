@@ -1,4 +1,4 @@
- <view class="landing-carousel">
+<view class="landing-carousel">
         <view class="btn-area">
             <button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
         </view>
@@ -15,4 +15,5 @@
       </block>  
     </swiper> 
 </view>
+
 

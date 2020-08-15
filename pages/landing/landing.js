@@ -3,7 +3,6 @@
 const app = getApp()
 
 Page({
-
   data: {
     currentUser: [],
     hasUserInfo: false,
@@ -23,8 +22,9 @@ Page({
         currentUser: user
       })
     });
-    wx.switchTab({
-      url: '/pages/profile/profile',
+
+    wx.navigateTo({
+      url: '/pages/landingform/landingform',
     })
   },
 
@@ -40,4 +40,5 @@ Page({
     });
 
   },
-});
+})
+

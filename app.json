@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/input/input",
     "pages/profile/profile",
-    "pages/dashboard/dashboard"
+    "pages/dashboard/dashboard",
+    "pages/landingform/landingform"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,19 +23,19 @@
       {
         "pagePath": "pages/dashboard/dashboard",
         "text": "Dashboard",
-        "iconPath": "pages/images/dashboard.png",
-        "selectedIconPath": "pages/images/dashboard2.png"
+        "iconPath": "/images/dashboard.png",
+        "selectedIconPath": "/images/dashboard2.png"
       },
       {
         "pagePath": "pages/input/input",
-        "iconPath": "pages/images/add.png",
-        "selectedIconPath": "pages/images/add2.png"
+        "iconPath": "/images/add.png",
+        "selectedIconPath": "/images/add2.png"
       },
       {
         "pagePath": "pages/profile/profile",
         "text": "Profile",
-        "iconPath": "pages/images/me.png",
-        "selectedIconPath": "pages/images/me2.png"
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me2.png"
       }
     ]
   },
@@ -47,3 +48,4 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
+
