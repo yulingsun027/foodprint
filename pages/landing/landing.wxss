@@ -38,7 +38,7 @@
 
 .btn-area {
   position: fixed;
-  height: 100vh;
+  height: 130vh;
   width: 100vw;
   z-index: 100;
   display: flex;
@@ -47,7 +47,8 @@
 }
 
 .button {
-  border-radius: 20px;
+  color: white;
+  border-radius: 10px;
   background-color: #B2C7A8;
-  border: 2px solid black;
+  border: 2px solid lightgray;
 }
