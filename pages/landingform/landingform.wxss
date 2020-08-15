@@ -1,6 +1,5 @@
-/* pages/landing form/landingform.wxss */
 .top-banner {
-  background-color: greenyellow;
+  background-color: #F4E9E2;
   border-radius: 0.25rem;
   box-shadow: 1.5px 2.5px 2.5px 1.5px rgba(0, 0, 0, 0.18);
   font-size: 200%;
@@ -17,9 +16,21 @@ width: 20em;
 }
 
 .section {
+  border-color: #b7b7b7;
   border-style: solid;
-  background: salmon;
+  border-radius: 10px;
+  background: #F4E9E2;
   width: 100%;
   margin: 0 0 0.5em;
   float: center;
+  padding-bottom: 30px;
 }
+.formButton {
+padding-top: 20px;
+color: #F4E9E2;
+
+}
+.formButton :active{
+  color: #F4E9E2;
+  top: 0.3em;
+    }

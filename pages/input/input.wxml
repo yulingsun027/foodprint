@@ -1,2 +1,21 @@
-<!--pages/input/input.wxml-->
-<text>pages/input/input.wxml</text>
+<view class="page-wrapper">
+
+<view class="card-product">
+    <view class="card-product-infos">
+    <view class="h1">what did you eat today?</view> 
+    </view>
+</view>
+
+<view class="smallBanner">
+    <view class="h1 card-product-infos">August 15, 2020</view>
+</view>
+
+<view class="cards"> 
+<view class="tabs">
+<view style="padding-left: 30px;" class="h1 {{tabName == 'breakfast' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="breakfast">Breakfast</view>
+<view style="padding-left: 30px;" class="h1 {{tabName == 'lunch' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="lunch">Lunch</view>
+<view style="padding-left: 30px;" class="h1 {{tabName == 'dinner' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="dinner">Dinner</view>
+</view>
+</view>
+
+</view>

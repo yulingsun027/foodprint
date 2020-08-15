@@ -1,3 +1,4 @@
+<view class="page-wrapper">
 <view class="top-banner">
 <text class="h1 top-banner-text">Tell us more about you!</text>
 </view>
@@ -7,31 +8,33 @@
 
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
-      <input  bindinput="bindTitleInput" placeholder="gender"/>
+      <!-- <input  bindinput="bindTitleInput" placeholder="gender"/> -->
+      <picker mode="selector" bindchange="pickGender" range="{{gender}}" placeholder="gender">Gender:{{userGender}}</picker>
     </view>
   </view>
   
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
-    <input  bindinput="bindDesInput" placeholder="age"/>
+    <input  bindinput="bindAgeInput" placeholder="age"/>
     </view>
   </view>
 
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
-    <input  bindinput="bindDesInput" placeholder="height"/>
+    <input  bindinput="bindHeightInput" placeholder="height cm"/>
     </view>
   </view>
 
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
-    <input  bindinput="bindDesInput" placeholder="weight"/>
+    <input  bindinput="bindWeightInput" placeholder="weight kg"/>
     </view>
   </view>
 
 
-  <view class="h1 btn-area">
-    <button formType="post" bindtap="formSubmit">Submit</button>
+  <view class="h1 formButton">
+    <button style="border-radius: 10px; color: #B2C7A8;" formType="post" bindtap="formSubmit">Submit</button>
   </view>
 </form>
+</view>
 </view>
