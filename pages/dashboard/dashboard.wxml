@@ -1,2 +1,15 @@
 <!--pages/dashboard/dashboard.wxml-->
-<text>pages/dashboard/dashboard.wxml</text>
+
+<view class="page-wrapper">
+ <view class="top-banner"> WELCOME BACK </view>
+
+<view class="card-product">
+  <image class="avatar" src="{{currentUser.avatar}}"></image>
+    <view class="card-product-infos">
+    <view class="h1 nickname">Username:</view> 
+    <view class="h1 nickname"> {{currentUser.nickname}} </view>
+    </view>
+</view>
+
+
+</view>
