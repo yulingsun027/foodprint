@@ -10,12 +10,48 @@
     <view class="h1 card-product-infos">August 15, 2020</view>
 </view>
 
-<view class="cards"> 
-<view class="tabs">
-<view style="padding-left: 30px;" class="h1 {{tabName == 'breakfast' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="breakfast">Breakfast</view>
-<view style="padding-left: 30px;" class="h1 {{tabName == 'lunch' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="lunch">Lunch</view>
-<view style="padding-left: 30px;" class="h1 {{tabName == 'dinner' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="dinner">Dinner</view>
-</view>
+<view class="submission-container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+      <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">Meal:{{userMeal}}</picker>
+    </view>
+  </view>
+
+  <view class="questionBanner">
+    <view class="h1 card-product-infos">What did you ear?</view>
 </view>
 
+<view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+      <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">delivery home-cooked restaurant{{userMeal}}</picker>
+    </view>
+  </view>
+
+  <view class="questionBanner">
+    <view class="h1 card-product-infos">How do you feel?</view>
+</view>
+
+<view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+      <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">unhappy satisfied happy{{userMeal}}</picker>
+    </view>
+  </view>
+
+  <view class="questionBanner">
+    <view class="h1 card-product-infos">How much did you spend?</view>
+</view>
+
+<view class="section">
+    <view style="padding-left: 10px;" class="h1 section__title">
+      <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">e.g. 50 rmb {{userMeal}}</picker>
+    </view>
+  </view>
+  
+  <view class="h1 formButton">
+    <button style="border-radius: 10px; color: #B2C7A8;" formType="post" bindtap="formSubmit">Save your updates</button>
+  </view>
+</form>
+</view>
 </view>
