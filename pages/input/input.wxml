@@ -6,6 +6,19 @@
     </view>
 </view>
 
+<<<<<<< HEAD
+=======
+<view class="section">
+  <view class="section__title">choose a date</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      date: {{date}}
+    </view>
+  </picker>
+</view>
+
+
+>>>>>>> master
 <view class="submission-container">
 <form bindsubmit="formSubmit" bindreset="formReset">
 
@@ -16,7 +29,7 @@
   </view>
 
   <view class="questionBanner">
-    <view class="h1 card-product-infos">What did you ear?</view>
+    <view class="h1 card-product-infos">What did you eat?</view>
 </view>
 
 <view class="section">
@@ -29,11 +42,16 @@
     <view class="h1 card-product-infos">How do you feel?</view>
 </view>
 
-<view class="section">
-    <view style="padding-left: 10px;" class="h1 section__title">
-      <picker mode="selector" bindchange="pickMood" range="{{mood}}" placeholder="mood">Mood on a scale of 1-5: {{userMood}}</picker>
+<view class="page">
+    <view class="page__hd">
+        <view class="section section_gap">
+            <text style="padding-left: 10px;" class="h1 section__title">mood on a scale of 1-100</text>
+            <view class="body-view">
+                <slider bindchange="sliderchange" show-value/>
+            </view>
+        </view>
     </view>
-  </view>
+</view>
 
   <view class="questionBanner">
     <view class="h1 card-product-infos">How much did you spend?</view>
