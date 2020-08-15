@@ -1,4 +1,5 @@
 // pages/input/input.js
+const moment = require("moment")
 Page({
   /**
    * Page initial data
@@ -11,7 +12,7 @@ Page({
     mood:['1', '2', '3', '4', '5'],
     usermood:0,
     usercost:0,
-    date: new Date().format('yyyy-mm-dd')
+    date: moment().format('YYYY-MM-DD')
   },
 
   bindDateChange: function(e) {
@@ -97,7 +98,7 @@ bindCostInput: function(e){
       usertype:'',
       usermood:0,
       usercost:0,
-      date: new Date().format('yyyy-mm-dd')
+      date: moment().format('YYYY-MM-DD')
       })
     })
   },
