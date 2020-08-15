@@ -15,7 +15,7 @@
 
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
-      <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">Meal:{{userMeal}}</picker>
+      <picker mode="selector" bindchange="pickMeal" range="{{meals}}" placeholder="meal">Meal:{{userMeal}}</picker>
     </view>
   </view>
 
