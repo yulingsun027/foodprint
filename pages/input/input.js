@@ -9,9 +9,8 @@ Page({
     type:['Delivery', 'Home-cooked', 'Restaurant'],
     usertype:'',
     mood:['1', '2', '3', '4', '5'],
-    usermood:'',
-    cost:['$', '$$', '$$$'],
-    usercost:'',
+    usermood:0,
+    usercost:0,
     date:'2020-08-15'
   },
 
@@ -26,30 +25,37 @@ Page({
     let index = event.detail.value;
     console.log(index);
     this.setData({
-      userMeal: this.data.meal[index]
+      usermeal: this.data.meal[index]
     })
   },
   pickType: function(event) {
     let index = event.detail.value;
     console.log(index);
     this.setData({
-      userType: this.data.type[index]
+      usertype: this.data.type[index]
     })
   },
   pickMood: function(event) {
     let index = event.detail.value;
     console.log(index);
     this.setData({
-      userMood: this.data.mood[index]
+      usermood: this.data.mood[index]
     })
   },
-  pickCost: function(event) {
-    let index = event.detail.value;
-    console.log(index);
-    this.setData({
-      userCost: this.data.cost[index]
-    })
-  },
+
+sliderchange: function (event){
+  console.log(event.detail.value);
+  this.setData({
+    usermood:event.detail.value
+  })
+},
+
+bindCostInput: function(e){
+  this.setData({
+    usercost: parseInt(e.detail.value)
+  })
+  }, 
+  
   /**
    * Lifecycle function--Called when page load
    */
@@ -65,6 +71,24 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
+  formSubmit:function(event){
+    console.log('mealinfo', event);
+    let Meal = new wx.BaaS.TableObject('meals');
+    let mealinfo = Meal.create();
+    console.log(this.data);
+    let data = {
+        // review's content and rating
+        meal: this.data.usermeal,
+        location:this.data.usertype,
+        cost: this.data.usercost,
+        date: this.data.date,
+        mood:this.data.usermood,
+    };
+    mealinfo.set(data).save().then(res => {
+      console.log('log a meal', res);
+    })
+  },
+
   onReady: function () {
 
   },
