@@ -5,8 +5,14 @@ Page({
    * Page initial data
    */
   data: {
-    meals:['Breakfast', 'Lunch', 'Dinner'],
+    meal:['Breakfast', 'Lunch', 'Dinner'],
     usermeal:'',
+    type:['Delivery', 'Home-cooked', 'Restaurant'],
+    usertype:'',
+    mood:['1', '2', '3', '4', '5'],
+    usermood:'',
+    cost:['$', '$$', '$$$'],
+    usercost:'',
   },
 
   pickMeal: function(event) {
@@ -14,6 +20,27 @@ Page({
     console.log(index);
     this.setData({
       userMeal: this.data.meal[index]
+    })
+  },
+  pickType: function(event) {
+    let index = event.detail.value;
+    console.log(index);
+    this.setData({
+      userType: this.data.type[index]
+    })
+  },
+  pickMood: function(event) {
+    let index = event.detail.value;
+    console.log(index);
+    this.setData({
+      userMood: this.data.mood[index]
+    })
+  },
+  pickCost: function(event) {
+    let index = event.detail.value;
+    console.log(index);
+    this.setData({
+      userCost: this.data.cost[index]
     })
   },
   /**
