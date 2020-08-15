@@ -6,8 +6,6 @@
     </view>
 </view>
 
-<<<<<<< HEAD
-=======
 <view class="section">
   <view class="section__title">choose a date</view>
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
@@ -17,8 +15,6 @@
   </picker>
 </view>
 
-
->>>>>>> master
 <view class="submission-container">
 <form bindsubmit="formSubmit" bindreset="formReset">
 
