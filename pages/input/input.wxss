@@ -1,1 +1,37 @@
-/* pages/input/input.wxss */
+.card-product {
+  overflow: hidden;
+  height: 80px;
+  background: #F4E9E2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+.smallBanner {
+  overflow: hidden;
+  height: 30px;
+  background: #Ffffff;
+  display: flex;
+  align-items: center;
+}
+.info-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 10px
+}
+.tabs {
+  display: flex;
+  align-items: center;
+}
+.activeTab {
+  background-color: #F4E9E2;
+}
+.cards {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
