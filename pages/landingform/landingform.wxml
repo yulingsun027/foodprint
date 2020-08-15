@@ -1,3 +1,4 @@
+<view class="page-wrapper">
 <view class="top-banner">
 <text class="h1 top-banner-text">Tell us more about you!</text>
 </view>
@@ -30,8 +31,9 @@
   </view>
 
 
-  <view class="h1 btn-area">
-    <button formType="post" bindtap="formSubmit">Submit</button>
+  <view class="h1 formButton">
+    <button style="border-radius: 10px; color: #B2C7A8;" formType="post" bindtap="formSubmit">Submit</button>
   </view>
 </form>
+</view>
 </view>
