@@ -11,7 +11,7 @@ Page({
     mood:['1', '2', '3', '4', '5'],
     usermood:0,
     usercost:0,
-    date:'2020-08-15'
+    date: new Date().format('yyyy-mm-dd')
   },
 
   bindDateChange: function(e) {
@@ -86,6 +86,19 @@ bindCostInput: function(e){
     };
     mealinfo.set(data).save().then(res => {
       console.log('log a meal', res);
+      wx.showToast({
+        title: 'meal logged!',
+        icon:'success',
+        duration:2000,
+        mask: true
+      })
+      this.setData({
+      usermeal:'',
+      usertype:'',
+      usermood:0,
+      usercost:0,
+      date: new Date().format('yyyy-mm-dd')
+      })
     })
   },
 

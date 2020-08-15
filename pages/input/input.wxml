@@ -62,7 +62,7 @@
   </view>
   
   <view class="h1 formButton">
-  <button href="#" class=" h1 myButton" formType="post" bindtap="formSubmit">Save your updates</button>
+  <button href="#" class=" h1 myButton" formType="post" bindtap="formSubmit" >Save your updates</button>
   </view>
 </form>
 </view>
