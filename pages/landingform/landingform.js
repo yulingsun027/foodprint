@@ -11,8 +11,27 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  formSubmit:function (){
+  formSubmit: function (event){
+    console.log('update user profile', event);
+    let Profile = new wx.BaaS.TableObject('_userprofile');
+    let myProfile = Profile.create();
+    console.log(this.data);
+    let data = {
+        // review's content and rating
+        userName: this.data.currentUser.nickname,
+        userAvatar: this.data.currentUser.avatar,
+        gender: this.data.gender,
+        age:this.data.age,
+        height: this.data.height,
+        weight: this.data.weight,
+    };
 
+    myProfile.set(data).save().then(res => {
+      console.log('save userprofile', res);
+      wx.switchTab({
+        url: '/pages/profile/profile',
+      })                                          
+    })
   },
   
   onLoad: function (options) {

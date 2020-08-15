@@ -25,7 +25,7 @@
 
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
-    <input  bindinput="bindDesInput" placeholder="height"/>
+    <input  bindinput="bindDesInput" placeholder="weight"/>
     </view>
   </view>
 
