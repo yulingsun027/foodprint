@@ -24,4 +24,9 @@
   flex-direction: column;
   padding-left: 10px;
   padding-top: 10px
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> master
