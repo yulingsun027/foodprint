@@ -1,6 +1,5 @@
 // pages/input/input.js
 Page({
-
   /**
    * Page initial data
    */
