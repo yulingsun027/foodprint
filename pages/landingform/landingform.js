@@ -1,12 +1,13 @@
 // pages/landing form/landingform.js
+const app = getApp()
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    currentUser:{
-    },
+    currentUser:{},
     gender:['female', 'male', 'neutral'],
     userGender:'',
     age:0,
@@ -51,7 +52,8 @@ Page({
         // update user profile
         // userName: this.data.currentUser.nickname,
         // userAvatar: this.data.currentUser.avatar,
-        gender: this.data.userGender,
+        userid: this.data.currentUser.id,
+        customgender: this.data.userGender,
         age:this.data.age,
         height: this.data.height,
         weight: this.data.weight,
@@ -66,7 +68,7 @@ Page({
   },
   
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -80,7 +82,10 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    console.log(app.globalData)
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
   },
 
   /**

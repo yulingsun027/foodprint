@@ -5,8 +5,12 @@ Page({
   /**
    * Page initial data
    */
-  data: {
-
+  data: { 
+    currentUser:{},
+    gender:'',
+    age:0,
+    height:0,
+    weight:0
   },
 
   /**
@@ -15,6 +19,18 @@ Page({
   onLoad: function (options) {
     this.setData({
       currentUser: app.globalData.userInfo,
+    });
+    let tableName = "updateuser";
+  
+    let Profile = new wx.BaaS.TableObject(tableName);
+    Profile.expand(['userid']).find().then((res) =>{
+      console.log('userinfo', res);
+      this.setData({
+        gender: res.data.objects[0].customgender,
+        age:res.data.objects[0].age,
+        height:res.data.objects[0].height,
+        weight:res.data.objects[0].weight,
+      })
     });
   },
 
