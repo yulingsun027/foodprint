@@ -1,0 +1,53 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.test-input {
+  background-color: #aaa;
+}
+
+.swiper {   
+  height: 100vh;   
+  width: 100%; 
+} 
+.swiper image {   
+  height: 100%;   
+  width: 100%; 
+}
+.swiper-item {
+  height: 100%;
+}
+
+.btn-area {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border-radius: 20px;
+  background-color: #B2C7A8;
+  border: 2px solid black;
+}

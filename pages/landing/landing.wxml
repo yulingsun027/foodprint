@@ -1,0 +1,18 @@
+ <view class="landing-carousel">
+        <view class="btn-area">
+            <button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
+        </view>
+ <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+      <block wx:for="{{movies}}" wx:for-index="index">  
+        <swiper-item>  
+        <image src="{{item.url}}"> </image>
+            <!-- <view class='swiper-item' style="background-image: url('{{item.url}}';)">
+                <view class="btn-area">
+                    <button wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
+                </view>
+            </view> -->
+        </swiper-item>  
+      </block>  
+    </swiper> 
+</view>
+
