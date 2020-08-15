@@ -6,7 +6,7 @@
 }
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 80px;
   background: #F4E9E2;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -22,4 +22,8 @@
 }
 .nickname {
   font-size: 18px;
+}
+.chartTitles {
+  display: flex;
+  align-items: space-between;
 }
