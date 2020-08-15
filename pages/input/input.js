@@ -8,6 +8,13 @@ Page({
 
   },
 
+  pickMeal: function(event) {
+    let index = event.detail.value;
+    console.log(index);
+    this.setData({
+      userMeal: this.data.meal[index]
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
