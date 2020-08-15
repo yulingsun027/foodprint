@@ -13,6 +13,12 @@
   display: flex;
   align-items: center;
 }
+.questionBanner {
+  overflow: hidden;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
 .info-card {
   overflow: hidden;
   display: flex;
@@ -20,18 +26,20 @@
   padding-left: 10px;
   padding-top: 10px
 }
-.tabs {
-  display: flex;
-  align-items: center;
-}
-.activeTab {
-  background-color: #F4E9E2;
-}
-.cards {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+.submission-container {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+  }
+  
+  .section {
+    border-color: #b7b7b7;
+    border-style: solid;
+    border-radius: 10px;
+    background: #F4E9E2;
+    width: 100%;
+    margin: 0 0 0.5em;
+    float: center;
+    padding-bottom: 30px;
+  }
