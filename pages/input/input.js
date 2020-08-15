@@ -5,7 +5,8 @@ Page({
    * Page initial data
    */
   data: {
-
+    meals:['Breakfast', 'Lunch', 'Dinner'],
+    usermeal:'',
   },
 
   pickMeal: function(event) {
