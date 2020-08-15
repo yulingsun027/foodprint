@@ -14,7 +14,12 @@ Page({
   onLoad: function (options) {
 
   },
-
+  viewTab: function(e){
+    let name = e.currentTarget.dataset.name;
+    this.setData({
+      tabName: name
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
