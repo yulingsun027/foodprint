@@ -12,6 +12,14 @@ Page({
     usermood:'',
     cost:['$', '$$', '$$$'],
     usercost:'',
+    date:'2020-08-15'
+  },
+
+  bindDateChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
   },
 
   pickMeal: function(event) {
