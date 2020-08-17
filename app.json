@@ -23,19 +23,19 @@
       {
         "pagePath": "pages/dashboard/dashboard",
         "text": "Dashboard",
-        "iconPath": "/images/dashboard.png",
-        "selectedIconPath": "/images/dashboard2.png"
+        "iconPath": "pages/images/dashboard.png",
+        "selectedIconPath": "pages/images/dashboard2.png"
       },
       {
         "pagePath": "pages/input/input",
-        "iconPath": "/images/add.png",
-        "selectedIconPath": "/images/add2.png"
+        "iconPath": "pages/images/add.png",
+        "selectedIconPath": "pages/images/add2.png"
       },
       {
         "pagePath": "pages/profile/profile",
         "text": "Profile",
-        "iconPath": "/images/me.png",
-        "selectedIconPath": "/images/me2.png"
+        "iconPath": "pages/images/me.png",
+        "selectedIconPath": "pages/images/me2.png"
       }
     ]
   },
