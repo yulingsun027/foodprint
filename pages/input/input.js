@@ -1,4 +1,5 @@
 // pages/input/input.js
+const moment = require("moment")
 Page({
   /**
    * Page initial data
@@ -11,7 +12,7 @@ Page({
     mood:['1', '2', '3', '4', '5'],
     usermood:0,
     usercost:0,
-    date:'2020-08-15'
+    date: moment().format('YYYY-MM-DD')
   },
 
   bindDateChange: function(e) {
@@ -86,6 +87,19 @@ bindCostInput: function(e){
     };
     mealinfo.set(data).save().then(res => {
       console.log('log a meal', res);
+      wx.showToast({
+        title: 'meal logged!',
+        icon:'success',
+        duration:2000,
+        mask: true
+      })
+      this.setData({
+      usermeal:'',
+      usertype:'',
+      usermood:0,
+      usercost:0,
+      date: moment().format('YYYY-MM-DD')
+      })
     })
   },
 
