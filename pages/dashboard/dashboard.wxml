@@ -1,2 +1,34 @@
 <!--pages/dashboard/dashboard.wxml-->
-<text>pages/dashboard/dashboard.wxml</text>
+
+<view class="page-wrapper">
+ <view class="top-banner"> WELCOME BACK </view>
+
+<view class="card-product">
+  <image class="avatar" src="{{currentUser.avatar}}"></image>
+    <view class="card-product-infos">
+    <view class="h1 nickname">Username:</view> 
+    <view class="h1 nickname"> {{currentUser.nickname}} </view>
+    </view>
+</view>
+
+<view class="card-product">
+  <view class="chartTitles">
+    <view class="h1 deliveryChart">delivery</view>
+    <view class="h1 takeOutChart">take-out</view>
+    <view class="h1 restaurantChart">restaurant</view>
+  </view>
+</view>
+
+<view style="padding-top: 10px; padding-left: 10px;" class="page">
+    <view class="page__hd">
+        <view class="section section_gap">
+            <text style="padding-left: 10px;" class="h1 section__title">Average level of satisfaction</text>
+            <view class="body-view">
+               <!-- <slider bindchange="sliderchange" role="slider" aria-valuemin="0" aria-valuemax="5" step="5" aria-valuenow="0" value="0" show-value=""/> -->
+              <slider bindchange="sliderchange" max="5" show-value/>
+            </view>
+        </view>
+    </view>
+</view>
+
+</view>
