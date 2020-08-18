@@ -2,7 +2,7 @@
 
 <view class="card-product">
     <view class="card-product-infos">
-    <view class="h1">what did you eat today?</view> 
+    <view class="h1">What did you eat today?</view> 
     </view>
 </view>
 
@@ -19,6 +19,7 @@
   </picker>
 </view>
 
+<view class="h1 title">Which Meal:</view>
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
       <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">Meal: {{usermeal}}</picker>
@@ -26,7 +27,7 @@
   </view>
 
   <view class="questionBanner">
-    <view class="h1 card-product-infos">What did you eat?</view>
+    <view class="h1 title">Where did you eat?</view>
 </view>
 
 <view class="section">
