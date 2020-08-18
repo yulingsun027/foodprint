@@ -71,7 +71,7 @@
         <view style="background-color: #8F754F;" class="fill"></view>
       </view>
       <view class="mask half">
-        <view class="fill"></view>
+        <view class="fill" style=""></view>
       </view>
       <view class="inside-circle"> {{deliveryPercentage}}% </view>
     </view>
