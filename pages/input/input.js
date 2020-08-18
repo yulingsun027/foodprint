@@ -1,10 +1,12 @@
 // pages/input/input.js
-const moment = require("moment")
+const app = getApp();
+const moment = require("moment");
 Page({
   /**
    * Page initial data
    */
   data: {
+    currentUser:{},
     meal:['Breakfast', 'Lunch', 'Dinner'],
     usermeal:'',
     type:['Delivery', 'Home-cooked', 'Restaurant'],
@@ -61,7 +63,9 @@ bindCostInput: function(e){
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({
+      currentUser: app.globalData.userInfo,
+    });
   },
   viewTab: function(e){
     let name = e.currentTarget.dataset.name;
@@ -84,6 +88,7 @@ bindCostInput: function(e){
         cost: this.data.usercost,
         date: this.data.date,
         mood:this.data.usermood,
+        userid: this.data.currentUser.id
     };
     mealinfo.set(data).save().then(res => {
       console.log('log a meal', res);
