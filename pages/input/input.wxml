@@ -1,14 +1,17 @@
 <view class="page-wrapper">
 
 <view class="card-product">
-  <text> Log your meal:</text> 
+    <view class="card-product-infos">
+    <view class="h1">What did you eat today?</view> 
+    </view>
 </view>
+
 
 <view class="submission-container">
 <form bindsubmit="formSubmit" bindreset="formReset">
 
-<view class="h1 title">Choose a date:</view>
 <view class="section">
+  <view class="h1 section__title">choose a date</view>
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="h1 picker">
       date: {{date}}
@@ -34,14 +37,15 @@
   </view>
 
   <view class="questionBanner">
-    <view class="h1 section__title">How do you feel?</view>
+    <view class="h1 card-product-infos">How do you feel?</view>
 </view>
 
 <view class="page">
     <view class="page__hd">
         <view class="section section_gap">
-            <text class="h1 title">Choose your mood:</text>
+            <text style="padding-left: 10px;" class="h1 section__title">mood on a scale of 1-5</text>
             <view class="body-view">
+               <!-- <slider bindchange="sliderchange" role="slider" aria-valuemin="0" aria-valuemax="5" step="5" aria-valuenow="0" value="0" show-value=""/> -->
               <slider bindchange="sliderchange" max="5" show-value/>
             </view>
         </view>
@@ -49,17 +53,17 @@
 </view>
 
   <view class="questionBanner">
-    <view class="h1 title">How much did you spend?</view>
+    <view class="h1 card-product-infos">How much did you spend?</view>
 </view>
 
 <view class="section">
-    <view style="padding-left: 10px;" class="h1 title">
+    <view style="padding-left: 10px;" class="h1 section__title">
      <input  bindinput="bindCostInput" placeholder="cost"/>
     </view>
   </view>
   
   <view class="h1 formButton">
-  <button href="#" class=" h1 myButton" formType="post" bindtap="formSubmit">Save your updates</button>
+  <button href="#" class=" h1 myButton" formType="post" bindtap="formSubmit" >Save your updates</button>
   </view>
 </form>
 </view>

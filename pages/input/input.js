@@ -1,9 +1,12 @@
 // pages/input/input.js
+const app = getApp();
+const moment = require("moment");
 Page({
   /**
    * Page initial data
    */
   data: {
+    currentUser:{},
     meal:['Breakfast', 'Lunch', 'Dinner'],
     usermeal:'',
     type:['Delivery', 'Home-cooked', 'Restaurant'],
@@ -11,7 +14,7 @@ Page({
     mood:['1', '2', '3', '4', '5'],
     usermood:0,
     usercost:0,
-    date:'2020-08-15'
+    date: moment().format('YYYY-MM-DD')
   },
 
   bindDateChange: function(e) {
@@ -60,7 +63,9 @@ bindCostInput: function(e){
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({
+      currentUser: app.globalData.userInfo,
+    });
   },
   viewTab: function(e){
     let name = e.currentTarget.dataset.name;
@@ -83,9 +88,23 @@ bindCostInput: function(e){
         cost: this.data.usercost,
         date: this.data.date,
         mood:this.data.usermood,
+        userid: this.data.currentUser.id
     };
     mealinfo.set(data).save().then(res => {
       console.log('log a meal', res);
+      wx.showToast({
+        title: 'meal logged!',
+        icon:'success',
+        duration:2000,
+        mask: true
+      })
+      this.setData({
+      usermeal:'',
+      usertype:'',
+      usermood:0,
+      usercost:0,
+      date: moment().format('YYYY-MM-DD')
+      })
     })
   },
 

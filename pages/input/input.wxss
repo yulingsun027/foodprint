@@ -1,15 +1,10 @@
-
 .card-product {
   overflow: hidden;
-  height: 50px;
+  height: 80px;
   background: #F4E9E2;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 30px;
-  font-weight: 500;
-
 }
 .smallBanner {
   overflow: hidden;
@@ -22,14 +17,14 @@
   overflow: hidden;
   height: 30px;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 .info-card {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 10px
 }
 .submission-container {
   margin-top: 30px;
@@ -47,7 +42,6 @@
     margin: 0 0 0.5em;
     float: center;
     padding-bottom: 30px;
-
   }
 
   .myButton {

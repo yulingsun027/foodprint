@@ -3,13 +3,13 @@
 <view class="page-wrapper">
  <view class="top-banner"> WELCOME BACK </view>
 
-<view class="card-product">
+<!-- <view class="card-product">
   <image class="avatar" src="{{currentUser.avatar}}"></image>
     <view class="card-product-infos">
     <view class="h1 nickname">Username:</view> 
     <view class="h1 nickname"> {{currentUser.nickname}} </view>
     </view>
-</view>
+</view> -->
 
 <view class="card-product">
   <view class="chartTitles">
@@ -29,6 +29,20 @@
             </view>
         </view>
     </view>
+</view>
+
+<view>
+  <view class="circle-wrap">
+    <view class="circle">
+      <view class="mask full">
+        <view class="fill"></view>
+      </view>
+      <view class="mask half">
+        <view class="fill"></view>
+      </view>
+      <view class="inside-circle"> {{dailyHomePercentage}}% </view>
+    </view>
+  </view>
 </view>
 
 </view>
