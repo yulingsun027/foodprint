@@ -29,7 +29,10 @@
   align-items: space-between;
 }
 
-
+.percentage{
+  display:flex;
+  align-items: center;
+}
 
 .circle-wrap {
   margin: 50px auto;
