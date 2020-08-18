@@ -63,7 +63,10 @@
   </view>
   
   <view class="h1 formButton">
-  <button href="#" class=" h1 myButton" formType="post" bindtap="formSubmit" >Save your updates</button>
+  <!-- <button href="#" class=" h1 myButton" formType="post" bindtap="formSubmit" >Save your updates</button> -->
+  <!-- <button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login and log your first meal!</button> -->
+
+  <button class="button" wx:if="{{currentUser}}" formType="post" bindtap="formSubmit">Save your meal updates</button>
   </view>
 </form>
 </view>

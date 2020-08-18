@@ -57,6 +57,7 @@
     </view>
 </view>
 
+<button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
 
 
 </view>
