@@ -31,7 +31,7 @@
     </view>
 </view>
 
-<view>
+<view class="percentage">
   <view class="circle-wrap">
     <view class="circle">
       <view class="mask full">
@@ -44,5 +44,19 @@
     </view>
   </view>
 </view>
+
+<view class="circle-wrap">
+    <view class="circle">
+      <view class="mask full">
+        <view class="fill"></view>
+      </view>
+      <view class="mask half">
+        <view class="fill"></view>
+      </view>
+      <view class="inside-circle"> {{restaurantPercentage}}% </view>
+    </view>
+</view>
+
+
 
 </view>

@@ -8,8 +8,13 @@ Page({
    */
   data: {
     currentUser:{},
+    // dailyData:{
+    //   meals:[],
+    //   homepercentage:0
+    // }
     dailyMeals:[],
-    dailyHomePercentage:0
+    dailyHomePercentage:0,
+    restaurantPercentage:0
     
     
   },
@@ -17,6 +22,9 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  percentCalc: function(){
+
+  },
 
   subtractDay:function(){
     let tableName = "meals";
@@ -33,7 +41,7 @@ Page({
       this.setData({
         dailyMeals: res.data.objects
       })
-
+//home cooked percentage
       const homecookObject = res.data.objects.filter(item => item.location === 'Home-cooked').length;
       console.log(homecookObject);
       let homepercentage = Math.round(homecookObject/res.data.objects.length * 100);
@@ -41,7 +49,14 @@ Page({
       this.setData({
         dailyHomePercentage: homepercentage
       });
-      
+//restuarant percentage
+      const restaurantObject = res.data.objects.filter(item => item.location === 'Restaurant').length;
+      console.log(restaurantObject);
+      let restaurantpercentage = Math.round(restaurantObject/res.data.objects.length * 100);
+      console.log(restaurantpercentage);
+      this.setData({
+        restaurantPercentage: restaurantpercentage
+      });
     })
   },
 
