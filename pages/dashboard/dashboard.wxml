@@ -31,4 +31,18 @@
     </view>
 </view>
 
+<view>
+  <view class="circle-wrap">
+    <view class="circle">
+      <view class="mask full">
+        <view class="fill"></view>
+      </view>
+      <view class="mask half">
+        <view class="fill"></view>
+      </view>
+      <view class="inside-circle"> {{dailyHomePercentage}}% </view>
+    </view>
+  </view>
+</view>
+
 </view>
