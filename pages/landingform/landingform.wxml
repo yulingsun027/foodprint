@@ -1,6 +1,6 @@
 <view class="page-wrapper">
 <view class="top-banner">
-<text class="h1 top-banner-text">Tell us more about you!</text>
+<text style="font-weight: bolder" class="h1 top-banner-text">Tell us more about you!</text>
 </view>
 
 <view class="submission-container">

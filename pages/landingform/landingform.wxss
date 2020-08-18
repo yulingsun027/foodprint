@@ -2,10 +2,11 @@
   background-color: #F4E9E2;
   border-radius: 0.25rem;
   box-shadow: 1.5px 2.5px 2.5px 1.5px rgba(0, 0, 0, 0.18);
-  font-size: 200%;
+  font-size: 20px;
+  font-weight: bolder;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .submission-container {
@@ -16,14 +17,15 @@ width: 20em;
 }
 
 .section {
-  border-color: #b7b7b7;
-  border-style: solid;
+  border-color: rgb(73, 124, 73);
+  border-style: solid; 
   border-radius: 10px;
   background: #F4E9E2;
   width: 100%;
   margin: 0 0 0.5em;
   float: center;
   padding-bottom: 30px;
+  text-align: center;
 }
 .formButton {
 padding-top: 20px;

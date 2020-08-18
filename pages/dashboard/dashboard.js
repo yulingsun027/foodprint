@@ -1,6 +1,6 @@
 // pages/dashboard/dashboard.js
 const app = getApp();
-const moment = require("moment");
+const moment = require("../../utils/moment");
 Page({
 
   /**
