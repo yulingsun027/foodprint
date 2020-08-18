@@ -1,3 +1,5 @@
+const { relativeTimeRounding } = require("../../utils/moment");
+
 // pages/profile/profile.js
 const app = getApp();
 Page({
@@ -7,15 +9,66 @@ Page({
    */
   data: { 
     currentUser:{},
-    gender:'',
+    gender:['female', 'male', 'neutral'],
+    userGender:'',
+    // customGender:'',
     age:0,
     height:0,
-    weight:0
+    weight:0,
+    showReport: false,
   },
 
   /**
    * Lifecycle function--Called when page load
    */
+  pickGender: function(event) {
+    let index = event.detail.value;
+    console.log(index);
+    this.setData({
+      userGender: this.data.gender[index]
+    })
+  },
+
+  bindAgeInput: function(e){
+    this.setData({
+      age: parseInt(e.detail.value)
+    })
+  }, 
+  bindHeightInput: function(e){
+    this.setData({
+      height: parseInt(e.detail.value)
+    })
+  }, 
+  bindWeightInput: function(e){
+    this.setData({
+      weight: parseInt(e.detail.value)
+    })
+  }, 
+
+  formSubmit: function (event){
+    const page = this;
+    console.log('update user profile', event);
+    let Profile = new wx.BaaS.TableObject('updateuser');
+    let myProfile = Profile.create();
+    console.log(this.data);
+    let data = {
+        // update user profile
+        // userName: this.data.currentUser.nickname,
+        // userAvatar: this.data.currentUser.avatar,
+        userid: this.data.currentUser.id,
+        customgender: this.data.userGender,
+        age:this.data.age,
+        height: this.data.height,
+        weight: this.data.weight,
+    };
+
+    myProfile.set(data).save().then(res => {
+      console.log('save userprofile', res);
+      const { userGender, age, height, weight } = page.data;
+      page.checkUserData( userGender, age, height, weight)                              
+    })
+  },
+
   onLoad: function (options) {
     this.setData({
       currentUser: app.globalData.userInfo,
@@ -26,14 +79,30 @@ Page({
     let query = new wx.BaaS.Query();
 
     query.compare('userid', '=',app.globalData.userInfo.id);
-    Profile.setQuery(query).expand(['userid']).find().then((res) =>{
+    Profile.setQuery(query).expand(['userid']).find().then((res) => {
       console.log('userinfo', res);
+      const { customgender, age, height, weight } = res.data.objects[0];
+
       this.setData({
-        gender: res.data.objects[0].customgender,
-        age:res.data.objects[0].age,
-        height:res.data.objects[0].height,
-        weight:res.data.objects[0].weight,
-      })
+        userGender: customgender,
+        age: age,
+        height: height,
+        weight: weight,
+      });
+      
+      this.checkUserData(customgender, age, height, weight);
+    });
+  },
+
+  checkUserData: function(customgender, age, height, weight) {
+    if(customgender && age && height && weight) {
+      this.setData({
+        showReport: true
+      });
+      return;
+    }
+    this.setData({
+      showReport: false
     });
   },
 

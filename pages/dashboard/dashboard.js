@@ -22,6 +22,19 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  userInfoHandler: function(data){
+    wx.BaaS.auth.loginWithWechat(data).then(user =>{
+      app.globalData.userInfo = user;
+      wx.setStorageSync('userInfo', user);
+      this.setData({
+        currentUser: user
+      })
+      wx.switchTab({
+        url: '/pages/profile/profile',
+      })
+    });
+  },
+
   percentCalc: function(){
 
   },
@@ -99,7 +112,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    this.setData({
+      currentUser: app.globalData.userInfo,
+    });
   },
 
   /**
