@@ -16,7 +16,7 @@
   </picker>
 </view>
 
-<view class="h1 title">Choose your meal:</view>
+<view class="h1 title">Which Meal:</view>
   <view class="section">
     <view style="padding-left: 10px;" class="h1 section__title">
       <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">Meal: {{usermeal}}</picker>
@@ -24,7 +24,7 @@
   </view>
 
   <view class="questionBanner">
-    <view class="h1 title">What did you eat?</view>
+    <view class="h1 title">Where did you eat?</view>
 </view>
 
 <view class="section">
