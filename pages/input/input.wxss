@@ -8,6 +8,9 @@
   font-weight: bolder;
   padding: 10px 0px;
   text-transform: uppercase;
+  border-color: rgb(73, 124, 73);
+  border-style: solid; 
+  border-radius: 10px;
 }
 .card-product h1{
   padding: 0px;
