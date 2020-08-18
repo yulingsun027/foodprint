@@ -34,9 +34,9 @@
 </view>
 
   <view style="margin-top: 5%;" class="allData">
-    <view style="margin-left: 5%; margin-top: 5%; color: #ff6347; font-weight: bold;" class="h1">At Home</view>
-    <view style="margin-top: 5%; color: #53687E; font-weight: bold;" class="h1">Restaurant</view>
-    <view style="color: #8F754F; font-weight: bold; margin-top: 5%; margin-right: 5%;" class="h1">Delivery</view>
+    <view style="margin-left: 5%; margin-top: 5%; color: #ef9b11; font-weight: bold;" class="h1">At Home</view>
+    <view style="margin-top: 5%; color: #f4d140; font-weight: bold;" class="h1">Restaurant</view>
+    <view style="color: #fff77d; font-weight: bold; margin-top: 5%; margin-right: 5%;" class="h1">Delivery</view>
 
   <view class="circle-wrap">
     <view class="circle">
@@ -44,7 +44,7 @@
         <view class="fill"></view>
       </view>
       <view class="mask half">
-        <view style="background-color: #ff6347;" class="fill"></view>
+        <view style="background-color: #ef9b11;" class="fill"></view>
       </view>
       <view class="inside-circle"> {{dailyHomePercentage}}% </view>
     </view>
@@ -56,7 +56,7 @@
         <view class="fill"></view>
       </view>
       <view class="mask half">
-        <view style="background-color: #53687E;" class="fill"></view>
+        <view style="background-color: #f4d140;" class="fill"></view>
       </view>
       <view class="inside-circle"> {{restaurantPercentage}}% </view>
     </view>
@@ -65,7 +65,7 @@
 <view class="circle-wrap">
     <view class="circle">
       <view class="mask full">
-        <view style="background-color: #8F754F;" class="fill"></view>
+        <view style="background-color: #fff77d;" class="fill"></view>
       </view>
       <view class="mask half">
         <view class="fill"></view>
