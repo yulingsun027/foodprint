@@ -3,7 +3,7 @@
   text-align: center;
   font-size: larger;
   padding: 10px;
-  color: white;
+  display: flex;
 }
 .card-product {
   overflow: hidden;
@@ -24,9 +24,14 @@
 .nickname {
   font-size: 18px;
 }
-.chartTitles {
+
+.allData {
+ 
   display: flex;
-  align-items: space-between;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .percentage{
@@ -36,27 +41,26 @@
 
 .circle-wrap {
   margin: 50px auto;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   background: #e6e2e7;
   border-radius: 50%;
 }
 
 .circle-wrap .circle .mask,
 .circle-wrap .circle .fill {
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   position: absolute;
   border-radius: 50%;
 }
 
 .circle-wrap .circle .mask {
-  clip: rect(0px, 150px, 150px, 75px);
+  clip: rect(0px, 75px, 75px, 37.5px);
 }
 
 .circle-wrap .circle .mask .fill {
-  clip: rect(0px, 75px, 150px, 0px);
-  background-color: #3CB371;
+  clip: rect(0px, 150px, 75px, 0px);
 }
 
 .circle-wrap .circle .mask.full,
@@ -75,16 +79,16 @@
 }
 
 .circle-wrap .inside-circle {
-  width: 130px;
-  height: 130px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   background: #fff;
-  line-height: 130px;
+  line-height: 65px;
   text-align: center;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
   position: absolute;
   z-index: 100;
-  font-weight: 700;
-  font-size: 2em;
+  font-weight: 500;
+  font-size: 1em;
 }

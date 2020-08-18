@@ -1,5 +1,3 @@
-
-<!--pages/profile/profile.wxml-->
 <view class="page-wrapper">
 <view class="card-product">
   <image class="avatar" src="{{currentUser.avatar}}"></image>
