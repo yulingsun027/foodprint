@@ -58,7 +58,16 @@ Page({
         restaurantPercentage: restaurantpercentage
       });
     })
-  },
+  
+  // //delivery percentage
+  //     const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery').length;
+  //     console.log(deliveryObject);
+  //     let deliverypercentage = Math.round(deliveryObject/res.data.objects.length * 100);
+  //     console.log(deliverypercentage);
+  //     this.setData({
+  //       deliveryPercentage: deliverypercentage
+  //     });
+    },
 
   onLoad: function (options) {
     this.setData({
