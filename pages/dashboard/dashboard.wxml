@@ -59,7 +59,7 @@
 
 
 
-<van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
+<van-circle value="{{homePercentage}}" color="#ee0a24" text="{{homePercentage}}%" />
 
 
 
