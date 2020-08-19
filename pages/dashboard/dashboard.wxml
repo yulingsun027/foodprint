@@ -1,56 +1,67 @@
-<!--pages/dashboard/dashboard.wxml-->
+<view class="page-wrapper">
 
-<view style="justify-content: center;" class="card-product">
- <view class="h1 top-banner"> WELCOME BACK! </view>
-</view>
+  <view class="card-product">
+    <view class="top">Welcome Back</view> 
+  </view>
+
+<view class="dashboard-container">
 
 <view class="allData" display: styles="flex; align-items: space-between;">
-  <view  bindtap="subtractDay" class="h1 {{tabName == 'daily' ? 'activeTab' : ''}}" data-name="daily">Daily</view>
-  <view  bindtap="subtractWeek" class="h1 {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
+    <view bindtap="subtractDay" class="h1 dailybutton {{tabName == 'daily' ? 'activeTab' : ''}}" data-name="daily">Daily</view>
+
+  <view  bindtap="subtractWeek" class="h1 weeklybutton {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
 </view>
 
-
-<view style="margin-top: 5%;" class="allData">
-    <view style="margin-left: 5%; margin-top: 5%; color: #ff6347; font-weight: bold;" class="h1">At Home</view>
-    <view style="margin-top: 5%; color: #53687E; font-weight: bold;" class="h1">Restaurant</view>
-    <view style="color: #8F754F; font-weight: bold; margin-top: 5%; margin-right: 5%;" class="h1">Delivery</view>
+<view class="meal-type-header">
+  <view class="allData" styles="flex; align-items: space-between; ">
+      <view style="color: #ff6347; font-weight: bold;" class="h1">At Home</view>
+      <view style="color: #53687E; font-weight: bold;" class="h1">Restaurant</view>
+      <view style="color: #8F754F; font-weight: bold;" class="h1">Delivery</view>
+      </view>
 </view>
 
-
-
-
-<van-circle class="allData" value="{{homePercentage}}" color="#ee0a24" text="{{homePercentage}}%" />
-
-<!-- display progress bar -->
-<view class="progress-bar" style="margin-bottom: 20px">
-<van-progress pivot-text="{{homeCost}}" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
-</view>
-<view class="progress-bar" style="margin-bottom: 20px">
-<van-progress pivot-text="{{restaurantCost}}" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
-</view>
-<view class="progress-bar" style="margin-bottom: 20px">
-<van-progress pivot-text="{{deliveryCost}}" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
+<view class="meal-type-percentages">
+    <van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
+    <van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
+    <van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
 </view>
 
-
-
-
-
-<view style="padding-top: 10px; padding-left: 10px;" class="page">
+<view class="satisfaction-bar">
+  <view class="page">
     <view class="page__hd">
         <view class="section section_gap">
-            <text style="padding-left: 10px;" class="h1 section__title">Average level of satisfaction</text>
-            <view class="body-view">
-               <!-- <slider bindchange="sliderchange" role="slider" aria-valuemin="0" aria-valuemax="5" step="5" aria-valuenow="0" value="0" show-value=""/> -->
-              <slider bindchange="sliderchange" max="5" show-value/>
-            </view>
+            <text class="h1 section__title">Average level of satisfaction</text>
         </view>
     </view>
+  </view>
 </view>
 
-<view>
-<button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
+
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress pivot-text="{{homeCost}}" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress pivot-text="{{restaurantCost}}" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress pivot-text="{{deliveryCost}}" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
 </view>
 
+<view class="happiness-rating">
+  <van-rate
+    value="{{ value }}"
+    size="{{ 50 }}"
+    icon="like"
+    void-icon="like-o"
+    bind:change="onChange"
+  />
+</view> 
+
+<view class="user-login">
+  <button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
+</view>
+
+</view>
+</view>
 
 
