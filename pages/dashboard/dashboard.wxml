@@ -25,6 +25,7 @@
     </view>
     <view class="mask half">
       <view style="background-color: #ff6347;" class="fill"></view>
+
     </view>
       <view class="inside-circle">{{homePercentage}}%</view>
   </view>
@@ -36,7 +37,7 @@
         <view class="fill"></view>
       </view>
       <view class="mask half">
-        <view style="background-color: #53687E;" class="fill"></view>
+        <view style="background-color: #f4d140;" class="fill"></view>
       </view>
       <view class="inside-circle"> {{restaurantPercentage}}% </view>
     </view>
@@ -45,7 +46,7 @@
 <view class="circle-wrap">
     <view class="circle">
       <view class="mask full">
-        <view style="background-color: #8F754F;" class="fill"></view>
+        <view style="background-color: #fff77d;" class="fill"></view>
       </view>
       <view class="mask half">
         <view class="fill" style=""></view>
