@@ -34,6 +34,7 @@
 	justify-content: space-evenly;
 }
 
+
 .percentage{
   display:flex;
   align-items: center;
@@ -74,7 +75,7 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(145deg);
+    transform: rotate(360deg);
   }
 }
 
