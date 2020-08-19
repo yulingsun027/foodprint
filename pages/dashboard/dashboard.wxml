@@ -53,9 +53,14 @@
       <view class="inside-circle"> {{deliveryPercentage}}% </view>
     </view>
 </view>
-<!-- </view> -->
-
 </view>
+
+<!-- one method -->
+
+
+
+<van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
+
 
 
 <view style="padding-top: 10px; padding-left: 10px;" class="page">
