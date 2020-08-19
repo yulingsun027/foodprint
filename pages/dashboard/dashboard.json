@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "van-circle": "../../dist/circle/index"
+    "van-circle": "../../dist/circle/index",
+    "van-rate": "../../dist/rate/index"
+    }
   }
-}

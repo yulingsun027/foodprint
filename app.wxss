@@ -36,4 +36,6 @@
 .page-wrapper {
   background: #B2C7A8;
   min-height: 100vh;
+  position: sticky;
+  top: 0px;
 }
