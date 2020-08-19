@@ -54,14 +54,16 @@
 
 
 <view wx:else>
+
 <view class="info-card">
-    <view class="h1 card-product-infos">Gender:{{userGender}}</view>
-    <view class="h1 card-product-infos" >Age:{{age}}</view>
-    <view class="h1 card-product-infos" >Height:{{height}}</view>
-    <view class="h1 card-product-infos" >Weight:{{weight}}</view>
+    <view class="h1 card-product-infos">Gender:  {{userGender}}</view>
+    <view class="h1 card-product-infos" >Age:  {{age}}</view>
+    <view class="h1 card-product-infos" >Height:  {{height}}</view>
+    <view class="h1 card-product-infos" >Weight:  {{weight}}</view>
 </view>
 </view>
 </view>
+
 
 
 

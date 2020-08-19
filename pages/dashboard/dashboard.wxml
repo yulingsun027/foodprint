@@ -9,57 +9,30 @@
   <view  bindtap="subtractWeek" class="h1 {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
 </view>
 
+
 <view style="margin-top: 5%;" class="allData">
     <view style="margin-left: 5%; margin-top: 5%; color: #ff6347; font-weight: bold;" class="h1">At Home</view>
     <view style="margin-top: 5%; color: #53687E; font-weight: bold;" class="h1">Restaurant</view>
     <view style="color: #8F754F; font-weight: bold; margin-top: 5%; margin-right: 5%;" class="h1">Delivery</view>
-<!-- </view> -->
-<!-- display data for daily tab -->
-<!-- <view wx:if="{{tabName == 'daily'}}"> -->
-
-
-<view class="circle-wrap">
-  <view class="circle">
-    <view class="mask full">
-      <view class="fill"></view>
-    </view>
-    <view class="mask half">
-      <view style="background-color: #ff6347;" class="fill"></view>
-    </view>
-      <view class="inside-circle">{{homePercentage}}%</view>
-  </view>
 </view>
 
-<view class="circle-wrap">
-    <view class="circle">
-      <view class="mask full">
-        <view class="fill"></view>
-      </view>
-      <view class="mask half">
-        <view style="background-color: #53687E;" class="fill"></view>
-      </view>
-      <view class="inside-circle"> {{restaurantPercentage}}% </view>
-    </view>
+
+
+
+<van-circle class="allData" value="{{homePercentage}}" color="#ee0a24" text="{{homePercentage}}%" />
+
+<!-- display progress bar -->
+<view class="progress-bar" style="margin-bottom: 20px">
+<van-progress pivot-text="{{homeCost}}" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+<van-progress pivot-text="{{restaurantCost}}" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+<van-progress pivot-text="{{deliveryCost}}" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
 </view>
 
-<view class="circle-wrap">
-    <view class="circle">
-      <view class="mask full">
-        <view style="background-color: #8F754F;" class="fill"></view>
-      </view>
-      <view class="mask half">
-        <view class="fill" style=""></view>
-      </view>
-      <view class="inside-circle"> {{deliveryPercentage}}% </view>
-    </view>
-</view>
-</view>
 
-<!-- one method -->
-
-
-
-<van-circle value="{{homePercentage}}" color="#ee0a24" text="{{homePercentage}}%" />
 
 
 

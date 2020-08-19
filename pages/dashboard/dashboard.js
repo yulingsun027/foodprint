@@ -14,6 +14,15 @@ Page({
     restaurantPercentage:0,
     deliveryPercentage:0,
     homeCost:0,
+    restaurantCost:0,
+    deliveryCost:0,
+    mealsCost:0,
+    homecostPerc:0,
+    rescostPerc:0,
+    delicostPerc:0
+
+
+
     
     // weeklyHomePercentage:0,
     // weeklyRestaurantPercentage:0,
@@ -69,39 +78,75 @@ Page({
 //calculate the daily home cost
 
       let homeCost = homecookObject.map(item => item.cost);
-      let total = 0;
+      let homeTotal = 0;
       for (let i = 0; i< homeCost.length; i++){
-        total += homeCost[i]
+        homeTotal += homeCost[i]
       };
-      let avg = total / homeCost.length;
+      let avg = homeTotal / homeCost.length;
       this.setData({
-        homeCost: avg
-      })
-      console.log('homeavg', avg);
+        homeCost: homeTotal
+      });
+      console.log('homeavg', homeTotal);
 
 
       
 //restuarant percentage
-      const restaurantObject = res.data.objects.filter(item => item.location === 'Restaurant').length;
+      const restaurantObject = res.data.objects.filter(item => item.location === 'Restaurant');
       console.log(restaurantObject);
-      let restaurantpercentage = Math.round(restaurantObject/res.data.objects.length * 100);
+      let restaurantpercentage = Math.round(restaurantObject.length/res.data.objects.length * 100);
       console.log(restaurantpercentage);
       this.setData({
         restaurantPercentage: restaurantpercentage
       });
+
+//restautant cost
+      let restaurantCost = restaurantObject.map(item => item.cost);
+      let resTotal = 0;
+      for (let i = 0; i< restaurantCost.length; i++){
+        resTotal += restaurantCost[i]
+      };
+      let resAvg = resTotal / restaurantCost.length;
+      this.setData({
+        restaurantCost: resTotal
+      })
+      console.log('homeavg', resTotal);
+
+
 //delivery percentage
-      const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery').length;
+      const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery');
       console.log(deliveryObject);
-      let deliverypercentage = Math.round(deliveryObject/res.data.objects.length * 100);
+      let deliverypercentage = Math.round(deliveryObject.length/res.data.objects.length * 100);
       console.log("DEL", deliverypercentage);
       this.setData({
         deliveryPercentage: deliverypercentage
       });
 
+//delivery cost
+      let deliveryCost = deliveryObject.map(item => item.cost);
+      let deliTotal = 0;
+      for (let i = 0; i< deliveryCost.length; i++){
+        deliTotal += deliveryCost[i]
+      };
+      let deliAvg = deliTotal / deliveryCost.length;
+      this.setData({
+        deliveryCost: deliTotal
+      })
+      console.log('homeavg', deliTotal);
+//calculate total cost and percentage
+      let totalCost = homeTotal + resTotal + deliTotal;
+      let homePerc = (homeTotal/totalCost)*100;
+      let resPerc = (resTotal/totalCost)*100;
+      let deliPerc = (deliTotal/totalCost)*100;
+      console.log("perandcost", homePerc, resPerc, deliPerc, totalCost)
+      this.setData({
+        mealsCost:totalCost,
+        homecostPerc: homePerc,
+        rescostPerc: resPerc,
+        delicostPerc: deliPerc
+      })
+
     })
-  
-  //delivery percentage
-      
+
     },
 
 //weekly data
@@ -122,29 +167,78 @@ subtractWeek:function(){
     })
 //home cooked percentage
     
-    const homecookObject = res.data.objects.filter(item => item.location === 'Home-cooked').length;
+    const homecookObject = res.data.objects.filter(item => item.location === 'Home-cooked');
     console.log(homecookObject);
-    let homepercentage = Math.round(homecookObject/res.data.objects.length * 100);
+    let homepercentage = Math.round(homecookObject.length/res.data.objects.length * 100);
     console.log(homepercentage);
     this.setData({
       homePercentage: homepercentage
     });
+
+    let homeCost = homecookObject.map(item => item.cost);
+      let homeTotal = 0;
+      for (let i = 0; i< homeCost.length; i++){
+        homeTotal += homeCost[i]
+      };
+      let avg = homeTotal / homeCost.length;
+      this.setData({
+        homeCost: homeTotal
+      })
+      console.log('homeavg', homeTotal);
+
 //restuarant percentage
-    const restaurantObject = res.data.objects.filter(item => item.location === 'Restaurant').length;
+    const restaurantObject = res.data.objects.filter(item => item.location === 'Restaurant');
     console.log(restaurantObject);
-    let restaurantpercentage = Math.round(restaurantObject/res.data.objects.length * 100);
+    let restaurantpercentage = Math.round(restaurantObject.length/res.data.objects.length * 100);
     console.log(restaurantpercentage);
     this.setData({
       restaurantPercentage: restaurantpercentage
     });
+
+    let restaurantCost = restaurantObject.map(item => item.cost);
+      let resTotal = 0;
+      for (let i = 0; i< restaurantCost.length; i++){
+        resTotal += restaurantCost[i]
+      };
+      let resAvg = resTotal / restaurantCost.length;
+      this.setData({
+        restaurantCost: resTotal
+      })
+      console.log('homeavg', resTotal);
+
+
 //delivery percentage
-    const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery').length;
+    const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery');
     console.log(deliveryObject);
-    let deliverypercentage = Math.round(deliveryObject/res.data.objects.length * 100);
+    let deliverypercentage = Math.round(deliveryObject.length/res.data.objects.length * 100);
     console.log("DEL", deliverypercentage);
     this.setData({
       deliveryPercentage: deliverypercentage
     });
+
+    let deliveryCost = deliveryObject.map(item => item.cost);
+      let deliTotal = 0;
+      for (let i = 0; i< deliveryCost.length; i++){
+        deliTotal += deliveryCost[i]
+      };
+      let deliAvg = deliTotal / deliveryCost.length;
+      this.setData({
+        deliveryCost: deliTotal
+      })
+      console.log('homeavg', deliTotal);
+
+//calculate total cost and percentage
+      let totalCost = homeTotal + resTotal + deliTotal;
+      let homePerc = (homeTotal/totalCost)*100;
+      let resPerc = (resTotal/totalCost)*100;
+      let deliPerc = (deliTotal/totalCost)*100;
+      console.log("perandcost", homePerc, resPerc, deliPerc, totalCost)
+      this.setData({
+        mealsCost:totalCost,
+        homecostPerc: homePerc,
+        rescostPerc: resPerc,
+        delicostPerc: deliPerc
+      })
 
   })
 
