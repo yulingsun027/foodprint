@@ -2,28 +2,43 @@
 const app = getApp();
 const moment = require("../../utils/moment");
 Page({
-
   /**
    * Page initial data
    */
   data: {
     currentUser:{},
-    // dailyData:{
-    //   meals:[],
-    //   homepercentage:0
-    // }
+  
     dailyMeals:[],
-    dailyHomePercentage:0,
-    restaurantPercentage:0
+    weeklyMeals:[],
+    homePercentage:0,
+    restaurantPercentage:0,
+    deliveryPercentage:0,
+    homeCost:0,
     
-    
+    // weeklyHomePercentage:0,
+    // weeklyRestaurantPercentage:0,
+    // weeklyDeliveryPercentage:0
+
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  percentCalc: function(){
+  userInfoHandler: function(data){
+    wx.BaaS.auth.loginWithWechat(data).then(user =>{
+      app.globalData.userInfo = user;
+      wx.setStorageSync('userInfo', user);
+      this.setData({
+        currentUser: user
+      })
+      wx.switchTab({
+        url: '/pages/profile/profile',
+      })
+    });
+  },
 
+  percentCalc: function(arg){
+    
   },
 
   subtractDay:function(){
@@ -42,13 +57,30 @@ Page({
         dailyMeals: res.data.objects
       })
 //home cooked percentage
-      const homecookObject = res.data.objects.filter(item => item.location === 'Home-cooked').length;
+      
+      const homecookObject = res.data.objects.filter(item => item.location === 'Home-cooked');
       console.log(homecookObject);
-      let homepercentage = Math.round(homecookObject/res.data.objects.length * 100);
+      let homepercentage = Math.round(homecookObject.length/res.data.objects.length * 100);
       console.log(homepercentage);
       this.setData({
-        dailyHomePercentage: homepercentage
+        homePercentage: homepercentage
       });
+
+//calculate the daily home cost
+
+      let homeCost = homecookObject.map(item => item.cost);
+      let total = 0;
+      for (let i = 0; i< homeCost.length; i++){
+        total += homeCost[i]
+      };
+      let avg = total / homeCost.length;
+      this.setData({
+        homeCost: avg
+      })
+      console.log('homeavg', avg);
+
+
+      
 //restuarant percentage
       const restaurantObject = res.data.objects.filter(item => item.location === 'Restaurant').length;
       console.log(restaurantObject);
@@ -57,23 +89,74 @@ Page({
       this.setData({
         restaurantPercentage: restaurantpercentage
       });
+//delivery percentage
+      const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery').length;
+      console.log(deliveryObject);
+      let deliverypercentage = Math.round(deliveryObject/res.data.objects.length * 100);
+      console.log("DEL", deliverypercentage);
+      this.setData({
+        deliveryPercentage: deliverypercentage
+      });
+
     })
   
-  // //delivery percentage
-  //     const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery').length;
-  //     console.log(deliveryObject);
-  //     let deliverypercentage = Math.round(deliveryObject/res.data.objects.length * 100);
-  //     console.log(deliverypercentage);
-  //     this.setData({
-  //       deliveryPercentage: deliverypercentage
-  //     });
+  //delivery percentage
+      
     },
+
+//weekly data
+subtractWeek:function(){
+  let tableName = "meals";
+  let Meal = new wx.BaaS.TableObject(tableName);
+  //set daily filter 
+  let weekly = moment().subtract(7, 'days')._d;
+  //convert the format to YYYY-MM-DD
+  let lastWeek = weekly.getFullYear() + '-' + (weekly.getMonth() + 1) + '-' + weekly.getDate(); 
+
+  let query = new wx.BaaS.Query();
+  query.compare('date', '>', lastWeek);
+  Meal.setQuery(query).find().then((res) =>{
+    console.log('weekly meal', res);
+    this.setData({
+      weeklyMeals: res.data.objects
+    })
+//home cooked percentage
+    
+    const homecookObject = res.data.objects.filter(item => item.location === 'Home-cooked').length;
+    console.log(homecookObject);
+    let homepercentage = Math.round(homecookObject/res.data.objects.length * 100);
+    console.log(homepercentage);
+    this.setData({
+      homePercentage: homepercentage
+    });
+//restuarant percentage
+    const restaurantObject = res.data.objects.filter(item => item.location === 'Restaurant').length;
+    console.log(restaurantObject);
+    let restaurantpercentage = Math.round(restaurantObject/res.data.objects.length * 100);
+    console.log(restaurantpercentage);
+    this.setData({
+      restaurantPercentage: restaurantpercentage
+    });
+//delivery percentage
+    const deliveryObject = res.data.objects.filter(item => item.location === 'Delivery').length;
+    console.log(deliveryObject);
+    let deliverypercentage = Math.round(deliveryObject/res.data.objects.length * 100);
+    console.log("DEL", deliverypercentage);
+    this.setData({
+      deliveryPercentage: deliverypercentage
+    });
+
+  })
+
+  },
+
+
 
   onLoad: function (options) {
     this.setData({
       currentUser: app.globalData.userInfo,
     });
-    this.subtractDay();
+    // this.subtractWeek();
     
     /*
     let tableName = "meals";
@@ -99,7 +182,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    this.setData({
+      currentUser: app.globalData.userInfo,
+    });
   },
 
   /**

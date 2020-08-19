@@ -1,3 +1,9 @@
+.page-contents {
+margin-top: 0px;
+margin-left: auto;
+margin-right: auto;
+width: 20em;
+}
 
 .card-product {
   overflow: hidden;
@@ -6,6 +12,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-color: rgb(73, 124, 73);
+  border-style: solid; 
+  border-radius: 10px;
 }
 .avatar {
   width: 100px;
@@ -27,6 +36,46 @@
   margin-top: 30px;
   padding-left: 10px;
   padding-top: 10px;
+  border-color: rgb(73, 124, 73);
+  border-style: solid; 
+  border-radius: 10px;
+}
+
+.top-banner {
+  background-color: #F4E9E2;
+  border-radius: 0.25rem;
+  box-shadow: 1.5px 2.5px 2.5px 1.5px rgba(0, 0, 0, 0.18);
+  font-size: 200%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.submission-container {
+margin-top: 30px;
+margin-left: auto;
+margin-right: auto;
+width: 20em;
+}
+
+.section {
+  border-color: #b7b7b7;
+  border-style: solid;
+  border-radius: 10px;
+  background: #F4E9E2;
+  width: 100%;
+  margin: 0 0 0.5em;
+  float: center;
+  padding-bottom: 30px;
+}
+.formButton {
+padding-top: 20px;
+color: #F4E9E2;
+
+}
+.formButton :active{
+  color: #F4E9E2;
+  top: 0.3em;
 }
 
 .h1 {

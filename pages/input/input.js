@@ -6,6 +6,9 @@ Page({
    * Page initial data
    */
   data: {
+    // currentUser: [],
+    // hasUserInfo: false,
+    // canIUse: wx.canIUse('button.open-type.getUserInfo'),
     currentUser:{},
     meal:['Breakfast', 'Lunch', 'Dinner'],
     usermeal:'',
@@ -16,6 +19,19 @@ Page({
     usercost:0,
     date: moment().format('YYYY-MM-DD')
   },
+
+  // userInfoHandler: function(data){
+  //   wx.BaaS.auth.loginWithWechat(data).then(user =>{
+  //     app.globalData.userInfo = user;
+  //     wx.setStorageSync('userInfo', user);
+  //     this.setData({
+  //       currentUser: user
+  //     })
+  //     wx.navigateTo({
+  //       url: '/pages/profile/profile',
+  //     })
+  //   });
+  // },
 
   bindDateChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -116,7 +132,7 @@ bindCostInput: function(e){
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    currentUser: app.globalData.userInfo
   },
 
   /**

@@ -1,54 +1,35 @@
 <!--pages/dashboard/dashboard.wxml-->
 
-<view class="page-wrapper">
 <view style="justify-content: center;" class="card-product">
  <view class="h1 top-banner"> WELCOME BACK! </view>
- </view>
-
-<!-- <view class="card-product">
-  <image class="avatar" src="{{currentUser.avatar}}"></image>
-    <view class="card-product-infos">
-    <view class="h1 nickname">Username:</view> 
-    <view class="h1 nickname"> {{currentUser.nickname}} </view>
-    </view>
-</view> -->
-
-<!-- <view class="card-product">
-  <view class="chartTitles">
-    <view class="h1 deliveryChart">delivery</view>
-    <view class="h1 takeOutChart">take-out</view>
-    <view class="h1 restaurantChart">restaurant</view>
-  </view>
-</view> -->
-
-<view style="padding-top: 10px; padding-left: 10px;" class="page">
-    <view class="page__hd">
-        <view class="section section_gap">
-            <text style="padding-left: 10px;" class="h1 section__title">Average level of satisfaction</text>
-            <view class="body-view">
-               <!-- <slider bindchange="sliderchange" role="slider" aria-valuemin="0" aria-valuemax="5" step="5" aria-valuenow="0" value="0" show-value=""/> -->
-              <slider bindchange="sliderchange" max="5" show-value/>
-            </view>
-        </view>
-    </view>
 </view>
 
-  <view style="margin-top: 5%;" class="allData">
-    <view style="margin-left: 5%; margin-top: 5%; color: #ef9b11; font-weight: bold;" class="h1">At Home</view>
-    <view style="margin-top: 5%; color: #f4d140; font-weight: bold;" class="h1">Restaurant</view>
-    <view style="color: #fff77d; font-weight: bold; margin-top: 5%; margin-right: 5%;" class="h1">Delivery</view>
+<view class="allData" display: styles="flex; align-items: space-between;">
+  <view  bindtap="subtractDay" class="h1 {{tabName == 'daily' ? 'activeTab' : ''}}" data-name="daily">Daily</view>
+  <view  bindtap="subtractWeek" class="h1 {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
+</view>
 
-  <view class="circle-wrap">
-    <view class="circle">
-      <view class="mask full">
-        <view class="fill"></view>
-      </view>
-      <view class="mask half">
-        <view style="background-color: #ef9b11;" class="fill"></view>
-      </view>
-      <view class="inside-circle"> {{dailyHomePercentage}}% </view>
+<view style="margin-top: 5%;" class="allData">
+    <view style="margin-left: 5%; margin-top: 5%; color: #ff6347; font-weight: bold;" class="h1">At Home</view>
+    <view style="margin-top: 5%; color: #53687E; font-weight: bold;" class="h1">Restaurant</view>
+    <view style="color: #8F754F; font-weight: bold; margin-top: 5%; margin-right: 5%;" class="h1">Delivery</view>
+<!-- </view> -->
+<!-- display data for daily tab -->
+<!-- <view wx:if="{{tabName == 'daily'}}"> -->
+
+
+<view class="circle-wrap">
+  <view class="circle">
+    <view class="mask full">
+      <view class="fill"></view>
     </view>
+    <view class="mask half">
+      <view style="background-color: #ff6347;" class="fill"></view>
+
+    </view>
+      <view class="inside-circle">{{homePercentage}}%</view>
   </view>
+</view>
 
 <view class="circle-wrap">
     <view class="circle">
@@ -68,10 +49,36 @@
         <view style="background-color: #fff77d;" class="fill"></view>
       </view>
       <view class="mask half">
-        <view class="fill"></view>
+        <view class="fill" style=""></view>
       </view>
       <view class="inside-circle"> {{deliveryPercentage}}% </view>
     </view>
 </view>
 </view>
+
+<!-- one method -->
+
+
+
+<van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
+
+
+
+<view style="padding-top: 10px; padding-left: 10px;" class="page">
+    <view class="page__hd">
+        <view class="section section_gap">
+            <text style="padding-left: 10px;" class="h1 section__title">Average level of satisfaction</text>
+            <view class="body-view">
+               <!-- <slider bindchange="sliderchange" role="slider" aria-valuemin="0" aria-valuemax="5" step="5" aria-valuenow="0" value="0" show-value=""/> -->
+              <slider bindchange="sliderchange" max="5" show-value/>
+            </view>
+        </view>
+    </view>
 </view>
+
+<view>
+<button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
+</view>
+
+
+
