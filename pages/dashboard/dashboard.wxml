@@ -37,6 +37,15 @@
 </view>
 
 
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress pivot-text="{{homeCost}}" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress pivot-text="{{restaurantCost}}" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress pivot-text="{{deliveryCost}}" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
+</view>
 
 <view class="happiness-rating">
   <van-rate
@@ -47,8 +56,6 @@
     bind:change="onChange"
   />
 </view> 
-
-
 
 <view class="user-login">
   <button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
