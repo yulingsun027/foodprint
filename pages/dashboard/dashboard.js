@@ -19,7 +19,8 @@ Page({
     mealsCost:0,
     homecostPerc:0,
     rescostPerc:0,
-    delicostPerc:0
+    delicostPerc:0,
+    mood:0
 
 
 
@@ -46,10 +47,7 @@ Page({
     });
   },
 
-  percentCalc: function(arg){
-    
-  },
-
+  
   subtractDay:function(){
     let tableName = "meals";
     let Meal = new wx.BaaS.TableObject(tableName);
@@ -58,9 +56,12 @@ Page({
     //convert the format to YYYY-MM-DD
     let yesterday = daily.getFullYear() + '-' + (daily.getMonth() + 1) + '-' + daily.getDate(); 
 
-    let query = new wx.BaaS.Query();
-    query.compare('date', '>', yesterday);
-    Meal.setQuery(query).find().then((res) =>{
+    let query1 = new wx.BaaS.Query();
+    query1.compare('date', '>', yesterday);
+    let query2 = new wx.BaaS.Query();
+    query2.compare('userid', '=',app.globalData.userInfo.id);
+    let andQuery = wx.BaaS.Query.and(query1, query2);
+    Meal.setQuery(andQuery).find().then((res) =>{
       console.log('daily meal', res);
       this.setData({
         dailyMeals: res.data.objects
@@ -132,6 +133,7 @@ Page({
         deliveryCost: deliTotal
       })
       console.log('homeavg', deliTotal);
+
 //calculate total cost and percentage
       let totalCost = homeTotal + resTotal + deliTotal;
       let homePerc = (homeTotal/totalCost)*100;
@@ -145,6 +147,17 @@ Page({
         delicostPerc: deliPerc
       })
 
+//calculate satisfaction data
+    let mood = res.data.objects.map(item => item.mood);
+    let moodTotal = 0;
+    for (let i = 0; i< mood.length; i++){
+      moodTotal += mood[i]
+    };
+    let moodAvg = Math.floor(moodTotal / mood.length);
+    this.setData({
+      mood: moodAvg
+    })
+    console.log('moodsavg', moodAvg);
     })
 
     },
@@ -238,7 +251,19 @@ subtractWeek:function(){
         homecostPerc: homePerc,
         rescostPerc: resPerc,
         delicostPerc: deliPerc
-      })
+      });
+    //calculate satisfaction data
+    let mood = res.data.objects.map(item => item.mood);
+    let moodTotal = 0;
+    for (let i = 0; i< mood.length; i++){
+      moodTotal += mood[i]
+    };
+    let moodAvg = Math.floor(moodTotal / mood.length);
+    this.setData({
+      mood: moodAvg
+    })
+    console.log('moodsavg', moodAvg);
+
 
   })
 
@@ -250,24 +275,8 @@ subtractWeek:function(){
     this.setData({
       currentUser: app.globalData.userInfo,
     });
-    // this.subtractWeek();
-    
-    /*
-    let tableName = "meals";
-    let Meal = new wx.BaaS.TableObject(tableName);
-    let daily = moment().subtract(1, 'days')._d;
-    let daily_value = daily.getFullYear() + '-' + (daily.getMonth() + 1) + '-' + daily.getDate(); 
-    console.log('daily',daily);
-    console.log('daily_value',daily_value);
-    // let query = new wx.BaaS.Query();
-    // query.compare('date','=', daily);
-    console.log(this.data.dailyMeals)
-    */
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
   onReady: function () {
 
   },
@@ -279,6 +288,7 @@ subtractWeek:function(){
     this.setData({
       currentUser: app.globalData.userInfo,
     });
+    
   },
 
   /**

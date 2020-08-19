@@ -2,6 +2,6 @@
   "usingComponents": {
     "van-circle": "../../dist/circle/index",
     "van-rate": "../../dist/rate/index",
-    "van-progress":"../../dist/progress/index",
+    "van-progress":"../../dist/progress/index"
   }
 }
