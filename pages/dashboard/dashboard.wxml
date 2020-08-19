@@ -21,9 +21,23 @@
 </view>
 
 <view class="meal-type-percentages">
-    <van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
-    <van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
-    <van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
+    <van-circle color="#ff6347" value="{{homePercentage}}" text="{{homePercentage}}%" />
+    <van-circle color="#53687E" value="{{restaurantPercentage}}" text="{{restaurantPercentage}}%" />
+    <van-circle color="#8F754F" value="{{deliveryPercentage}}" text="{{deliveryPercentage}}%" />
+</view>
+
+
+<view class="cost-percentage">
+<view>View how much you spent on each location:</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress class="progress-bar" pivot-text="{{homeCost}}rmb" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress class="progress-bar" pivot-text="{{restaurantCost}}rmb" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+  <van-progress class="progress-bar" pivot-text="{{deliveryCost}}rmb" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
+</view>
 </view>
 
 <view class="satisfaction-bar">
@@ -36,24 +50,12 @@
   </view>
 </view>
 
-
-<view class="progress-bar" style="margin-bottom: 20px">
-  <van-progress pivot-text="{{homeCost}}" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
-</view>
-<view class="progress-bar" style="margin-bottom: 20px">
-  <van-progress pivot-text="{{restaurantCost}}" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
-</view>
-<view class="progress-bar" style="margin-bottom: 20px">
-  <van-progress pivot-text="{{deliveryCost}}" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
-</view>
-
 <view class="happiness-rating">
   <van-rate
-    value="{{ value }}"
+    value="{{ mood }}"
     size="{{ 50 }}"
     icon="like"
     void-icon="like-o"
-    bind:change="onChange"
   />
 </view> 
 
