@@ -19,7 +19,20 @@
 
 
 
-<van-circle value="{{homePercentage}}" text="{{homePercentage}}%" />
+<van-circle class="allData" value="{{homePercentage}}" color="#ee0a24" text="{{homePercentage}}%" />
+
+<!-- display progress bar -->
+<view class="progress-bar" style="margin-bottom: 20px">
+<van-progress pivot-text="{{homeCost}}" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+<van-progress pivot-text="{{restaurantCost}}" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
+</view>
+<view class="progress-bar" style="margin-bottom: 20px">
+<van-progress pivot-text="{{deliveryCost}}" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
+</view>
+
+
 
 
 
