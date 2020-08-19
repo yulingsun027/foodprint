@@ -12,31 +12,38 @@
   <view  bindtap="subtractWeek" class="h1 weeklybutton {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
 </view>
 
+<!-- make a class called h2 -->
+<view class="h1">Frequency at each location:</view>
 <view class="meal-type-header">
   <view class="allData" styles="flex; align-items: space-between; ">
-      <view style="color: #ff6347; font-weight: bold;" class="h1">At Home</view>
-      <view style="color: #53687E; font-weight: bold;" class="h1">Restaurant</view>
-      <view style="color: #8F754F; font-weight: bold;" class="h1">Delivery</view>
-      </view>
+      <view style="color: #197163; font-weight: bold;" class="h1">Home</view>
+      <view style="color: #44b1a0; font-weight: bold;" class="h1">Restaurant</view>
+      <view style="color: #84a9ac ; font-weight: bold;" class="h1">Delivery</view>
+  <view class="meal-type-percentages" styles="flex; align-items: space-between;">
+    <van-circle color="#197163" value="{{homePercentage}}" text="{{homePercentage}}%" />
+    <van-circle color="#44b1a0" value="{{restaurantPercentage}}" text="{{restaurantPercentage}}%" />
+    <van-circle color="#84a9ac" value="{{deliveryPercentage}}" text="{{deliveryPercentage}}%" />
+  </view>
+  </view>
+
 </view>
 
-<view class="meal-type-percentages">
-    <van-circle color="#ff6347" value="{{homePercentage}}" text="{{homePercentage}}%" />
-    <van-circle color="#53687E" value="{{restaurantPercentage}}" text="{{restaurantPercentage}}%" />
-    <van-circle color="#8F754F" value="{{deliveryPercentage}}" text="{{deliveryPercentage}}%" />
-</view>
+
 
 
 <view class="cost-percentage">
-<view>View how much you spent on each location:</view>
+<view class="h1">Cost on each location:</view>
+<view style="color: #197163">HOME</view>
 <view class="progress-bar" style="margin-bottom: 20px">
-  <van-progress class="progress-bar" pivot-text="{{homeCost}}rmb" stroke-width="10" color="#ff6347" percentage="{{homecostPerc}}" />
+  <van-progress class="progress-bar" pivot-text="{{homeCost}}rmb" stroke-width="10" color="#197163" percentage="{{homecostPerc}}" />
 </view>
+<view style="color: #44b1a0">RESTAURANT</view>
 <view class="progress-bar" style="margin-bottom: 20px">
-  <van-progress class="progress-bar" pivot-text="{{restaurantCost}}rmb" stroke-width="10" color="#53687E" percentage="{{rescostPerc}}"/>
+  <van-progress class="progress-bar" pivot-text="{{restaurantCost}}rmb" stroke-width="10" color="#44b1a0" percentage="{{rescostPerc}}"/>
 </view>
+<view style="color: #84a9ac">DELIVERY</view>
 <view class="progress-bar" style="margin-bottom: 20px">
-  <van-progress class="progress-bar" pivot-text="{{deliveryCost}}rmb" stroke-width="10" color="#8F754F" percentage="{{delicostPerc}}" />
+  <van-progress class="progress-bar" pivot-text="{{deliveryCost}}rmb" stroke-width="10" color="#84a9ac" percentage="{{delicostPerc}}" />
 </view>
 </view>
 
@@ -55,6 +62,7 @@
     value="{{ mood }}"
     size="{{ 50 }}"
     icon="like"
+    color="#ffe78f"
     void-icon="like-o"
   />
 </view> 
