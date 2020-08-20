@@ -31,10 +31,10 @@
     </view>
   </view>
 
-
-  <view class="h1 formButton">
-    <button style="border-radius: 10px; color: #B2C7A8;" formType="post" bindtap="formSubmit">Submit</button>
-  </view>
 </form>
 </view>
+
+<button class="coolButton" formType="post" bindtap="formSubmit">Submit</button>
+
+
 </view>

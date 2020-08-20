@@ -45,10 +45,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.button {
-  color: white;
-  border-radius: 10px;
-  background-color: #B2C7A8;
-  border: 2px solid lightgray;
-}

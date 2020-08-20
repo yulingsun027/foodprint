@@ -8,9 +8,6 @@
   font-weight: bolder;
   padding: 10px 0px;
   text-transform: uppercase;
-  border-color: rgb(73, 124, 73);
-  border-style: solid; 
-  border-radius: 10px;
 }
 .card-product h1{
   padding: 0px;
@@ -30,9 +27,8 @@
 
 .submission-container {
   margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20em;
+  margin-left: 4%;
+  margin-right: 6%;
   }
   
   .section {
@@ -41,35 +37,7 @@
     border-radius: 10px;
     background: #F4E9E2;
     width: 100%;
-    margin: 0 0 0.5em;
     float: center;
     padding-bottom: 30px;
     text-align: center;
   }
-
-  .myButton {
-    box-shadow: 2px 4px 0px 0px #899599;
-    background:linear-gradient(to bottom, #F4E9E2 5%, #F4E9E2 100%);
-    background-color:#F4E9E2;
-    border-radius:19px;
-    display:inline-block;
-    cursor:pointer;
-    color:rgb(73, 124, 73);
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:13px 37px;
-    text-decoration:none;
-     text-shadow:0px 0px 0px #e1e2ed;
-     transition: 0.5s;
-   }
-   .myButton:hover {
-    background:linear-gradient(to bottom, #ffff 10%, #F4E9E2 100%);
-    background-color:#F4E9E2;
-   }
-   .myButton:active {
-    position:relative;
-     top:1px;
-     box-shadow: 0px 0px 0px 0px #899599;
-   }
-  

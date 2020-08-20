@@ -1,4 +1,4 @@
-<view class="page-wrapper">
+<view style="text-align: center;" class="page-wrapper">
 
 <view class="card-product">
   <view class="top">What did you eat today?</view> 
@@ -7,7 +7,7 @@
 <view class="submission-container">
 <form bindsubmit="formSubmit" bindreset="formReset">
 
-<view style="font-weight: bold" class="h1">choose a date</view>
+<view style="font-weight: bold" class="h2">choose a date</view>
 <view class="section">
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="h1 picker">
@@ -16,14 +16,14 @@
   </picker>
 </view>
 
-<view style="font-weight: bold" class="h1">Which Meal:</view>
+<view style="font-weight: bold" class="h2">Which Meal:</view>
   <view class="section">
-    <view style="padding-left: 10px;" class="h1 section__title">
+    <view class="h1 section__title">
       <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">Meal: {{usermeal}}</picker>
     </view>
   </view>
   
-<view style="font-weight: bold" class="h1">Where did you eat?</view>
+<view style="font-weight: bold" class="h2">Where did you eat?</view>
   <view class="questionBanner"></view>
 <view class="section">
     <view class="h1">
@@ -31,7 +31,7 @@
     </view>
   </view>
 
-<view style="font-weight: bold" class="h1">How do you feel?</view>
+<view style="font-weight: bold" class="h2">How do you feel?</view>
   <view class="questionBanner">
 </view>
 
@@ -46,21 +46,17 @@
     </view>
 </view>
 
-<view style="font-weight: bold" class="h1">How much did you spend?</view>
+<view style="font-weight: bold" class="h2">How much did you spend?</view>
 <view class="questionBanner"></view>
 
-<view class="section">
-    <view style="padding-left: 10px;" class="h1">
+<view style="margin-bottom: 30px;" class="section">
+    <view class="h1">
      <input bindinput="bindCostInput" placeholder="cost"/>
     </view>
   </view>
-  
-  <view class="h1 formButton">
-  <!-- <button href="#" class=" h1 myButton" formType="post" bindtap="formSubmit" >Save your updates</button> -->
-  <!-- <button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login and log your first meal!</button> -->
 
-  <button class="button" wx:if="{{currentUser}}" formType="post" bindtap="formSubmit">Save your meal updates</button>
-  </view>
-</form>
+<button class="coolButton" formType="post" bindtap="formSubmit">SAVE YOUR MEAL</button>
+
+  </form>
 </view>
 </view>
