@@ -55,7 +55,7 @@
     </view>
   </view>
 
-<button class="coolButton" wx:if="{{currentUser}}" formType="post" bindtap="formSubmit">SAVE YOUR MEAL</button>
+<button class="coolButton" formType="post" bindtap="formSubmit">SAVE YOUR MEAL</button>
 
   </form>
 </view>
