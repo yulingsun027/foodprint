@@ -18,7 +18,7 @@
 
 <view style="font-weight: bold" class="h1">Which Meal:</view>
   <view class="section">
-    <view style="padding-left: 10px;" class="h1 section__title">
+    <view class="h1 section__title">
       <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">Meal: {{usermeal}}</picker>
     </view>
   </view>
@@ -50,7 +50,7 @@
 <view class="questionBanner"></view>
 
 <view style="margin-bottom: 30px;" class="section">
-    <view style="padding-left: 10px;" class="h1">
+    <view class="h1">
      <input bindinput="bindCostInput" placeholder="cost"/>
     </view>
   </view>
