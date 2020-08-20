@@ -12,6 +12,7 @@
 .h1 {
   color: #000000;
   font-weight: 300;
+  font-size: small;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
