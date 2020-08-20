@@ -39,3 +39,26 @@
   position: sticky;
   top: 0px;
 }
+.coolButton {
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  color:#B2C7A8;
+  background-color:#F4E9E2;
+  box-shadow: inset 0 -1em 0 -0.5em rgba(0,0,0,0.17);
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+ }
+
+ .coolButton:active {
+  top: 0.4em;
+  transition: 0.3s;
+  display: block;
+  margin: 0.4em auto;
+  }

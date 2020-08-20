@@ -39,9 +39,6 @@ border-color: rgb(73, 124, 73);
 border-style: solid; 
 border-radius: 10px;
 }
-
-
-
 .dashboard-container {
 margin-left: 5%;
 margin-right: 5%;
@@ -49,8 +46,7 @@ align-items: center;
 flex-wrap: wrap;
 justify-content: space-evenly;
 }
-
-.happiness-rating{
-
-
+.user-login {
+  width: 100%;
+  text-align: center;
 }

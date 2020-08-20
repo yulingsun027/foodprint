@@ -27,12 +27,3 @@ width: 20em;
   padding-bottom: 30px;
   text-align: center;
 }
-.formButton {
-padding-top: 20px;
-color: #F4E9E2;
-
-}
-.formButton :active{
-  color: #F4E9E2;
-  top: 0.3em;
-    }
