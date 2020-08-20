@@ -7,11 +7,11 @@
   justify-content: center;
   font-size: 20px;
   font-weight: bolder;
+  padding: 10px 0px;
   text-transform: uppercase;
-  border-color: rgb(73, 124, 73);
-  border-style: solid; 
-  border-radius: 10px;
+  margin-bottom: 5%;
 }
+
 .card-product h1{
   padding: 0px;
 }
@@ -27,18 +27,38 @@
 .nickname {
   font-size: 18px;
 }
+
+.container-style{
+  background-color: #F4E9E2;
+  margin-bottom: 5%;
+  border-color: rgb(73, 124, 73);
+  border-style: solid; 
+  border-radius: 10px;
+}
+
+.time-setting {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.meal-type {
+  display:flex; 
+  align-items: space-evenly;
+}
+
+.meal-type-percentages {
+  display:flex; 
+  align-items: center;
+}
+
 .allData {
-background-color: #F4E9E2;
-margin-top: 5%;
 display: flex;
 align-items: center;
  -webkit-flex-wrap: wrap;
 flex-wrap: wrap;
 justify-content: space-evenly;
-border-color: rgb(73, 124, 73);
-border-style: solid; 
-border-radius: 10px;
 }
+
 .dashboard-container {
 margin-left: 5%;
 margin-right: 5%;

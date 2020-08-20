@@ -17,6 +17,17 @@
   text-align: center;
   padding-bottom: 5px;
 }
+
+.h2 {
+  color: #000000;
+  font-weight: 600;
+  font-size: small;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
 .p {
     color: #696969;
     flex: 1 1 auto;
