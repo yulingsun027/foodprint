@@ -171,9 +171,12 @@ subtractWeek:function(){
   //convert the format to YYYY-MM-DD
   let lastWeek = weekly.getFullYear() + '-' + (weekly.getMonth() + 1) + '-' + weekly.getDate(); 
 
-  let query = new wx.BaaS.Query();
-  query.compare('date', '>', lastWeek);
-  Meal.setQuery(query).find().then((res) =>{
+  let query1 = new wx.BaaS.Query();
+    query1.compare('date', '>', lastWeek);
+  let query2 = new wx.BaaS.Query();
+    query2.compare('userid', '=',app.globalData.userInfo.id);
+  let andQuery = wx.BaaS.Query.and(query1, query2);
+  Meal.setQuery(andQuery).find().then((res) =>{
     console.log('weekly meal', res);
     this.setData({
       weeklyMeals: res.data.objects
