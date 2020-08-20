@@ -115,13 +115,13 @@ bindCostInput: function(e){
         duration:2000,
         mask: true
       })
-      // this.setData({
-      // usermeal:'',
-      // usertype:'',
-      // usermood:0,
-      // usercost:0,
-      // date: moment().format('YYYY-MM-DD')
-      // })
+      this.setData({
+      usermeal:'',
+      usertype:'',
+      usermood:0,
+      usercost:0,
+      date: moment().format('YYYY-MM-DD')
+      })
     })
   },
 
