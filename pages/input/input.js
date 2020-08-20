@@ -54,13 +54,13 @@ Page({
       usertype: this.data.type[index]
     })
   },
-  pickMood: function(event) {
-    let index = event.detail.value;
-    console.log(index);
-    this.setData({
-      usermood: this.data.mood[index]
-    })
-  },
+  // pickMood: function(event) {
+  //   let index = event.detail.value;
+  //   console.log(index);
+  //   this.setData({
+  //     usermood: this.data.mood[index]
+  //   })
+  // },
 
 sliderchange: function (event){
   console.log(event.detail.value);
@@ -93,6 +93,7 @@ bindCostInput: function(e){
    * Lifecycle function--Called when page is initially rendered
    */
   formSubmit:function(event){
+    
     console.log('mealinfo', event);
     let Meal = new wx.BaaS.TableObject('meals');
     let mealinfo = Meal.create();
@@ -114,13 +115,13 @@ bindCostInput: function(e){
         duration:2000,
         mask: true
       })
-      this.setData({
-      usermeal:'',
-      usertype:'',
-      usermood:0,
-      usercost:0,
-      date: moment().format('YYYY-MM-DD')
-      })
+      // this.setData({
+      // usermeal:'',
+      // usertype:'',
+      // usermood:0,
+      // usercost:0,
+      // date: moment().format('YYYY-MM-DD')
+      // })
     })
   },
 
