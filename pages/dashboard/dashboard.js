@@ -22,9 +22,6 @@ Page({
     delicostPerc:0,
     mood:0
 
-
-
-    
     // weeklyHomePercentage:0,
     // weeklyRestaurantPercentage:0,
     // weeklyDeliveryPercentage:0
