@@ -7,7 +7,7 @@
 <view class="submission-container">
 <form bindsubmit="formSubmit" bindreset="formReset">
 
-<view style="font-weight: bold" class="h1">choose a date</view>
+<view style="font-weight: bold" class="h2">choose a date</view>
 <view class="section">
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="h1 picker">
@@ -16,14 +16,14 @@
   </picker>
 </view>
 
-<view style="font-weight: bold" class="h1">Which Meal:</view>
+<view style="font-weight: bold" class="h2">Which Meal:</view>
   <view class="section">
     <view class="h1 section__title">
       <picker mode="selector" bindchange="pickMeal" range="{{meal}}" placeholder="meal">Meal: {{usermeal}}</picker>
     </view>
   </view>
   
-<view style="font-weight: bold" class="h1">Where did you eat?</view>
+<view style="font-weight: bold" class="h2">Where did you eat?</view>
   <view class="questionBanner"></view>
 <view class="section">
     <view class="h1">
@@ -31,7 +31,7 @@
     </view>
   </view>
 
-<view style="font-weight: bold" class="h1">How do you feel?</view>
+<view style="font-weight: bold" class="h2">How do you feel?</view>
   <view class="questionBanner">
 </view>
 
@@ -46,7 +46,7 @@
     </view>
 </view>
 
-<view style="font-weight: bold" class="h1">How much did you spend?</view>
+<view style="font-weight: bold" class="h2">How much did you spend?</view>
 <view class="questionBanner"></view>
 
 <view style="margin-bottom: 30px;" class="section">
