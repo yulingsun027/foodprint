@@ -7,9 +7,9 @@
 <view class="dashboard-container">
 
 <view class="allData" display: styles="flex; align-items: space-between;">
-    <view bindtap="subtractDay" class="h1 dailybutton {{tabName == 'daily' ? 'activeTab' : ''}}" data-name="daily">Daily</view>
+    <view bindtap="subtractDay" class="coolButton {{tabName == 'daily' ? 'activeTab' : ''}}" data-name="daily">Daily</view>
 
-  <view  bindtap="subtractWeek" class="h1 weeklybutton {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
+  <view  bindtap="subtractWeek" class="coolButton {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
 </view>
 
 <!-- make a class called h2 -->
@@ -68,7 +68,7 @@
 </view> 
 
 <view class="user-login">
-  <button class="button" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
+  <button class="coolButton" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
 </view>
 
 </view>
