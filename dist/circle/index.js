@@ -26,7 +26,7 @@ VantComponent({
     },
     size: {
       type: Number,
-      value: 100,
+      value: 70,
       observer() {
         this.drawCircle(this.currentValue);
       },
