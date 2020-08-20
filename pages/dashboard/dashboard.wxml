@@ -1,7 +1,7 @@
 <view class="page-wrapper">
 
   <view class="card-product">
-    <view class="top">Welcome Back</view> 
+    <view class="top">Let's Get Tracking</view> 
   </view>
 
 <view class="dashboard-container">
@@ -38,7 +38,7 @@
 </view>
 
 
-<view class="h2">Cost on each location:</view>
+<view class="h2">How much are you spending:</view>
 
   <view class="container-style">
   <view style="color: #197163">HOME</view>
