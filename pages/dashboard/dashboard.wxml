@@ -20,17 +20,20 @@
 
 
 
-  <view class="container-style">
+<view class="container-style">
   <view class="meal-type">
+    <view class="meal">
       <view style="color: #197163; font-weight: bold;" class="h1">Home</view>
+       <van-circle class="percentageCircles" color="#197163" value="{{homePercentage}}" text="{{homePercentage}}%" />
+    </view>
+    <view class="meal">
       <view style="color: #44b1a0; font-weight: bold;" class="h1">Restaurant</view>
+      <van-circle color="#44b1a0" value="{{restaurantPercentage}}" text="{{restaurantPercentage}}%" />
+    </view>
+    <view class="meal">
       <view style="color: #84a9ac ; font-weight: bold;" class="h1">Delivery</view>
-  </view>
-
-  <view class="meal-type-percentages">
-    <van-circle color="#197163" value="{{homePercentage}}" text="{{homePercentage}}%" />
-    <van-circle color="#44b1a0" value="{{restaurantPercentage}}" text="{{restaurantPercentage}}%" />
-    <van-circle color="#84a9ac" value="{{deliveryPercentage}}" text="{{deliveryPercentage}}%" />
+      <van-circle color="#84a9ac" value="{{deliveryPercentage}}" text="{{deliveryPercentage}}%" />
+    </view>   
   </view>
 </view>
 
@@ -52,16 +55,18 @@
   </view>
 </view>
 
-<text class="h2">Average level of satisfaction</text>
+<view class="h2">Average level of satisfaction:</view>
 
 <view class="container-style">
-  <van-rate
-    value="{{ mood }}"
-    size="{{ 50 }}"
-    icon="like"
-    color="#ffe78f"
-    void-icon="like-o"
-  />
+  <view class="satisfaction">
+    <van-rate
+      value="{{ mood }}"
+      size="{{ 50 }}"
+      icon="like"
+      color="#B2C7A8"
+      void-icon="like-o"
+     />
+  </view>
 </view> 
 
 <view class="user-login">

@@ -30,10 +30,12 @@
 
 .container-style{
   background-color: #F4E9E2;
-  margin-bottom: 5%;
+  margin-bottom: 5px;
+  padding: 15px;
   border-color: rgb(73, 124, 73);
   border-style: solid; 
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .time-setting {
@@ -43,12 +45,21 @@
 
 .meal-type {
   display:flex; 
-  align-items: space-evenly;
+  justify-content: space-evenly;
 }
 
 .meal-type-percentages {
   display:flex; 
   align-items: center;
+}
+
+.meal{
+  text-align: center;
+}
+
+.satisfaction {
+justify-content: center;
+display: flex;
 }
 
 .allData {
@@ -69,4 +80,9 @@ justify-content: space-evenly;
 .user-login {
   width: 100%;
   text-align: center;
+}
+
+.percentageCircles {
+  width: 50px;
+  height: 50px;
 }
