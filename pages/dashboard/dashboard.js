@@ -288,7 +288,7 @@ subtractWeek:function(){
     this.setData({
       currentUser: app.globalData.userInfo,
     });
-    
+    this.subtractDay();
   },
 
   /**
