@@ -114,6 +114,9 @@ bindCostInput: function(e){
         icon:'success',
         duration:2000,
         mask: true
+      }),
+      wx.switchTab({
+        url: '/pages/dashboard/dashboard',
       })
       this.setData({
       usermeal:'',
