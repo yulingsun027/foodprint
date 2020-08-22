@@ -6,6 +6,10 @@
 
 <view class="dashboard-container">
 
+<view class="user-login">
+  <button class="coolButton" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
+</view>
+
 <view class="h2">Choose your time setting:</view>
 
 <view class="container-style">
@@ -68,10 +72,6 @@
      />
   </view>
 </view> 
-
-<view class="user-login">
-  <button class="coolButton" wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to track your foodprint!</button>
-</view>
 
 </view>
 </view>
