@@ -69,6 +69,6 @@
   text-align: center;
  }
 
- .coolButton:active {
+ /* .coolButton:active {
   background-color:whitesmoke;
-  }
+  } */
