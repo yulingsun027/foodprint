@@ -16,7 +16,7 @@
   <view class="time-setting">
       <view bindtap="subtractDay" class="coolButton {{tabName == 'daily' ? 'activeTab' : ''}}" data-name="daily">Daily</view>
 
-    <view  bindtap="subtractWeek" class="coolButton {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
+     <view  bindtap="subtractWeek" class="coolButton {{tabName == 'weekly' ? 'activeTab' : ''}}" data-name="weekly">Weekly</view>
   </view>
 </view>
 
