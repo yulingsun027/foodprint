@@ -9,7 +9,7 @@
 
 <view style="font-weight: bold" class="h2">choose a date</view>
 <view class="section">
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+  <picker mode="date" value="{{date}}" start="2020-01-01" end="2021-09-01" bindchange="bindDateChange">
     <view class="h1 picker">
       date: {{date}}
     </view>
